@@ -17,87 +17,87 @@
 
 module ALU   #(parameter ADR_8 = 8, ADR_5 = 5, BIT_D = 32)
    (input                    clk,
-    input       [BIT_D-1:0]  RD1,
-    input       [BIT_D-1:0]  RD2,
-    input       [ADR-1:0]    ALUOp,
+    input       [BIT_D-1:0]  RD1_alu,
+    input       [BIT_D-1:0]  RD2_alu,
+    input       [ADR_5-1:0]  ALUOp_alu,
     
     output  reg              Flag,   
     output  reg [BIT_D-1:0]  Result
 );                            
     
-    reg_file inst_alu(
+   /* RF inst_alu(
         .clk(clk),
-        .RD1(RD1),
-        .RD2(RD2),
-        .ALUop(ALUop)
-    );
+        .RD1(RD1_alu),
+        .RD2(RD2_alu),
+        .ALUop(ALUop_alu)
+    );*/
     
     always @(*) begin
-        case(ALUOp)
+        case(ALUOp_alu)
             //ALU_ADD: Result = A + B;
             `ALU_ADD: begin          //1
-                Result = RD1 + RD2;
+                Result = RD1_alu + RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_SUB: begin          //2
-                Result = RD1 - RD2;
+                Result = RD1_alu - RD2_alu;
                 Flag = 1'b0;
             end
             `ALU_SLL: begin          //3
-                Result = RD1 << RD2;
+                Result = RD1_alu << RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_SLT: begin          //4
-                Result = ($signed(RD1) < $signed(RD2)) ? 1 : 0;
+                Result = ($signed(RD1_alu) < $signed(RD2_alu)) ? 1 : 0;
                 Flag = 1'b0;
             end 
             `ALU_SLTU: begin          //5
-                Result = (RD1 < RD2) ? 1 : 0;
+                Result = (RD1_alu < RD2_alu) ? 1 : 0;
                 Flag = 1'b0;
             end 
             `ALU_XOR: begin          //6
-                Result = RD1 ^ RD2;
+                Result = RD1_alu ^ RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_SRL: begin          //7
-                Result = RD1 >> RD2;
+                Result = RD1_alu >> RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_SRA: begin          //8
-                Result = $signed(RD1) >>> RD2;
+                Result = $signed(RD1_alu) >>> RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_OR: begin          //9
-                Result = RD1 | RD2;
+                Result = RD1_alu | RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_AND: begin          //10
-                Result = RD1 & RD2;
+                Result = RD1_alu & RD2_alu;
                 Flag = 1'b0;
             end 
             `ALU_BEQ: begin          //11
                 Result = 0;
-                Flag = (RD1==RD2) ? 1 : 0;
+                Flag = (RD1_alu == RD2_alu) ? 1 : 0;
             end 
             `ALU_BNE: begin          //12
                 Result = 0;
-                Flag = (RD1 != RD2) ? 1 : 0;
+                Flag = (RD1_alu != RD2_alu) ? 1 : 0;
             end 
             `ALU_BLT: begin          //13
                 Result = 0;
-                Flag = ($signed(RD1) < $signed(RD2)) ? 1 : 0;
+                Flag = ($signed(RD1_alu) < $signed(RD2_alu)) ? 1 : 0;
             end 
             `ALU_BGE: begin          //14
                 Result = 0;
-                Flag = ($signed(RD1) >= $signed(RD2)) ? 1 : 0;
+                Flag = ($signed(RD1_alu) >= $signed(RD2_alu)) ? 1 : 0;
             end 
             `ALU_BLTU: begin          //15
                 Result = 0;
-                Flag = (RD1 < RD2) ? 1 : 0;
+                Flag = (RD1_alu < RD2_alu) ? 1 : 0;
             end 
             `ALU_BGEU: begin          //16
                 Result = 0;
-                Flag = (RD1 >= RD2) ? 1 : 0;
+                Flag = (RD1_alu >= RD2_alu) ? 1 : 0;
             end 
             
             default: begin 
