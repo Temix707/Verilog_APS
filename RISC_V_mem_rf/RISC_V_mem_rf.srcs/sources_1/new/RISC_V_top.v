@@ -19,11 +19,8 @@ module RISC_V_top
           //.Сигн.внешн.мод(Сигн.внутр.мод)
      
    /// RF ///
-    wire             WE3;
-    assign WE3  = instr[29] || instr[28];
-    wire [ADR_5-1:0] A1;
-    wire [ADR_5-1:0] A2;
-    wire [ADR_5-1:0] A3;
+    wire [1:0]       WE3;
+    assign WE3 [1:0] = instr[29] || instr[28];
     wire [BIT_D-1:0] WD3;
         
     wire [BIT_D-1:0] RD1;      
@@ -41,8 +38,6 @@ module RISC_V_top
     );
    
    /// ALU ///
-    wire [ADR_5-1:0]  ALUOp;
-    
     wire              Flag;  
     wire [BIT_D-1:0]  Result;
     ALU dut3(
@@ -57,7 +52,7 @@ module RISC_V_top
     
    /// MUX 3x1 ///
     wire [BIT_D-1:0] SE;
-    assign SE = {{24{instr[7]}}, instr[7:0]};
+    assign SE = {{24{instr[12]}}, instr[12:5]};
     mux3x1 dut4(
         .WS_mux(instr[29:28]),
         .IN_mux(IN),

@@ -5,18 +5,22 @@ module RF
         input                     WE3_rf,
         input       [ADR_5-1:0]   A1_rf,
         input       [ADR_5-1:0]   A2_rf,
-        input       [ADR_5-1:0]   A3_rf,
+        input       [ADR_5-1:0]   A3_rf,    //WA
         input       [BIT_D-1:0]   WD3_rf,
         
-        output reg  [BIT_D-1:0]   RD1_rf,      
-        output reg  [BIT_D-1:0]   RD2_rf      
+        output  [BIT_D-1:0]   RD1_rf,      
+        output  [BIT_D-1:0]   RD2_rf      
     );
+
+    reg [BIT_D-1:0] ram_rf [0:BIT_D-1];
+    assign RD1_rf = ram_rf[A1_rf];
+    assign RD2_rf = ram_rf[A2_rf];
     
-    //wire [BIT_D-1:0] instr_rf;
-    //IM inst_rf(.clk(clk), .instr_im(instr_rf));
-    
-    always @(posedge clk) begin
-    
+    always @ (posedge clk) begin
+        if(WE3_rf) begin
+            ram_rf[A3_rf] <= WD3_rf;
+        end
     end
     
 endmodule
+

@@ -30,34 +30,22 @@ module bip_3l_tb();
         inp_num_tb = 0;
         #10 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-        
         #10 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-        
         #10 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-        
         #10 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-        
         #10 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-        
         #30 inp_num_tb = 1;
         #10 inp_num_tb = 0;
-       
-        
         #30 inp_num_tb = 1;
         #130 inp_num_tb = 0;
-        
         #30 inp_num_tb = 1;      
-        
         #30 inp_num_tb = 0;
         #50 inp_num_tb = 1;
-       
         #10 
-        $finish;
-        
-        
+        $finish;       
     end
 endmodule

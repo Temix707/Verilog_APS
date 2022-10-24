@@ -32,3 +32,19 @@ update_compile_order -fileset sources_1
 update_compile_order -fileset sim_1
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 6
+[Mon Oct 24 12:43:51 2022] Launched synth_1...
+Run output will be captured here: C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Mon Oct 24 23:22:20 2022] Launched synth_1...
+Run output will be captured here: C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Mon Oct 24 23:23:14 2022] Launched synth_1...
+Run output will be captured here: C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Mon Oct 24 23:47:16 2022] Launched synth_1...
+Run output will be captured here: C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.runs/synth_1/runme.log
+update_compile_order -fileset sim_1

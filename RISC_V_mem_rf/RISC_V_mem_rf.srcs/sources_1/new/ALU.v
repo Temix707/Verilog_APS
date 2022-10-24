@@ -25,13 +25,6 @@ module ALU   #(parameter ADR_8 = 8, ADR_5 = 5, BIT_D = 32)
     output  reg [BIT_D-1:0]  Result
 );                            
     
-   /* RF inst_alu(
-        .clk(clk),
-        .RD1(RD1_alu),
-        .RD2(RD2_alu),
-        .ALUop(ALUop_alu)
-    );*/
-    
     always @(*) begin
         case(ALUOp_alu)
             //ALU_ADD: Result = A + B;

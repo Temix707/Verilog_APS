@@ -1,7 +1,4 @@
-Running: xsim.dir/decoder_3l_tb_behav/xsimk.exe -simmode gui -wdb decoder_3l_tb_behav.wdb -simrunnum 0 -socket 54219
+Running: xsim.dir/decoder_3l_tb_behav/xsimk.exe -simmode gui -wdb decoder_3l_tb_behav.wdb -simrunnum 0 -socket 55779
 Design successfully loaded
-Design Loading Memory Usage: 5888 KB (Peak: 5888 KB)
-Design Loading CPU Usage: 0 ms
-Simulation completed
-Simulation Memory Usage: 6524 KB (Peak: 6524 KB)
-Simulation CPU Usage: 0 ms
+Design Loading Memory Usage: 5932 KB (Peak: 5932 KB)
+Design Loading CPU Usage: 15 ms
