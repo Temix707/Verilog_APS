@@ -66,3 +66,8 @@ $finish called at time : 410 ns : File "C:/Vivado_project/bipolar_three/bipolar_
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'decoder_3l_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
 launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 818.457 ; gain = 40.121
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 818.457 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 25 13:46:05 2022...

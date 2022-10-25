@@ -36,12 +36,14 @@ module RISC_V_top
         .RD1_rf(RD1), 
         .RD2_rf(RD2)
     );
+    
+    assign OUT = RD1;
    
    /// ALU ///
     wire              Flag;  
     wire [BIT_D-1:0]  Result;
     ALU dut3(
-        .clk(clk),
+        //.clk(clk),
         .RD1_alu(RD1),
         .RD2_alu(RD2),
         .ALUOp_alu(instr[27:23]),
@@ -50,18 +52,22 @@ module RISC_V_top
         .Result(Result)
     );
     
+    /// SE ///
+    wire [31:0] SE;
+    SE dut4(
+        .SE_i(instr[27:5]),
+        
+        .SE_o(SE)
+    );
+    
    /// MUX 3x1 ///
-    wire [BIT_D-1:0] SE;
-    assign SE = {{24{instr[12]}}, instr[12:5]};
-    mux3x1 dut4(
+    mux3x1 dut5(
         .WS_mux(instr[29:28]),
         .IN_mux(IN),
         .const(SE),
         .Res_alu(Result),
         
-        .WD3_mux(WD3)
-        
+        .WD3_mux(WD3)     
     );
-    
     
 endmodule

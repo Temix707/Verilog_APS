@@ -2,3 +2,6 @@ Running: xsim.dir/decoder_3l_tb_behav/xsimk.exe -simmode gui -wdb decoder_3l_tb_
 Design successfully loaded
 Design Loading Memory Usage: 5932 KB (Peak: 5932 KB)
 Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 6584 KB (Peak: 6584 KB)
+Simulation CPU Usage: 46 ms

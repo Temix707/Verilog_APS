@@ -33,6 +33,7 @@ read_verilog -library xil_defaultlib {
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/ALU.v
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/IM.v
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/RF.v
+  C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/SE.v
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/mux3x1.v
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/RISC_V_top.v
 }
@@ -44,6 +45,9 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/constrs_1/new/constr.xdc
+set_property used_in_implementation false [get_files C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/constrs_1/new/constr.xdc]
+
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 

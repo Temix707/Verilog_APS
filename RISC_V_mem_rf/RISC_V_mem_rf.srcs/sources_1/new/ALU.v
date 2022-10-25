@@ -16,7 +16,7 @@
 `define ALU_BGEU    5'b11111
 
 module ALU   #(parameter ADR_8 = 8, ADR_5 = 5, BIT_D = 32)
-   (input                    clk,
+   (//input                    clk,
     input       [BIT_D-1:0]  RD1_alu,
     input       [BIT_D-1:0]  RD2_alu,
     input       [ADR_5-1:0]  ALUOp_alu,

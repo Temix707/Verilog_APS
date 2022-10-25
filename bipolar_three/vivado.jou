@@ -14,3 +14,4 @@ open_project C:/Vivado_project/bipolar_three/bipolar_three.xpr
 update_compile_order -fileset sources_1
 launch_simulation
 source decoder_3l_tb.tcl
+close_sim
