@@ -8,8 +8,7 @@ module RF
         input       [ADR_5-1:0]   A3_rf,    //WA
         input       [BIT_D-1:0]   WD3_rf,
         
-        output  [BIT_D-1:0]   RD1_rf,      
-        output  [BIT_D-1:0]   RD2_rf      
+        output  [BIT_D-1:0]   RD1_rf, RD2_rf     
     );
 
     reg [BIT_D-1:0] ram_rf [0:BIT_D-1];
