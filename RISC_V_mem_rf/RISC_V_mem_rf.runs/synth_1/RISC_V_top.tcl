@@ -29,7 +29,10 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo c:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_mem C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/ram.txt
+read_mem {
+  C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/ram.txt
+  C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/rf.txt
+}
 read_verilog -library xil_defaultlib {
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/ALU.v
   C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sources_1/new/IM.v

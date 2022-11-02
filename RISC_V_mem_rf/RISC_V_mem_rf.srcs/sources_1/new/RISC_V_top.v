@@ -19,11 +19,11 @@ module RISC_V_top
     wire        MUX_PC;
     wire        MUX_PC_flag;
     wire        EN;
-   reg [7:0] PC = 8'b00000000; 
+    reg [7:0] PC = 8'b00000000; 
     
     wire        Flag; 
     
-    assign EN = 1'd1;
+    assign  EN = 1'd1;
     assign  MUX_PC_flag = (Flag && instr[30]) || instr[31];
     assign  MUX_PC = MUX_PC_flag ? instr[12:5] : 8'b00000001;  // либо прибавляет какое то число, либо единицу
     

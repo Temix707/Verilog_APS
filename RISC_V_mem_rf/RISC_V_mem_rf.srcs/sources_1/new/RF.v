@@ -12,10 +12,15 @@ module RF
     );
 
     reg [BIT_D-1:0] ram_rf [0:BIT_D-1];
-    assign RD1_rf = ram_rf[A1_rf];
+    initial $readmemb("ram.txt", ram_rf);
+    
+    // Читает
+    assign RD1_rf = ram_rf[A1_rf];          // ~ 3 = ram_rf[1]
     assign RD2_rf = ram_rf[A2_rf];
     
+    // Записывает
     always @ (posedge clk) begin
+        ram_rf[0] = 32'd0;
         if(WE3_rf) begin
             ram_rf[A3_rf] <= WD3_rf;
         end
@@ -23,3 +28,6 @@ module RF
     
 endmodule
 
+
+
+//* Обращение к 1 элементу множества mem. Подобное обращение вернет 32-битный вектор типа reg.
