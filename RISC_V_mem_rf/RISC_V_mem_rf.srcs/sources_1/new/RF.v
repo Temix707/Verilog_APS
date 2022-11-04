@@ -12,7 +12,7 @@ module RF
     );
 
     reg [BIT_D-1:0] ram_rf [0:BIT_D-1];
-    initial $readmemb("ram.txt", ram_rf);
+    initial $readmemb("rf.txt", ram_rf);
     
     // Читает
     assign RD1_rf = ram_rf[A1_rf];          // ~ 3 = ram_rf[1]

@@ -1,6 +1,63 @@
 `timescale 1ns / 1ps
 
 module RISC_V_tb();
+
+    reg  [31:0] IN_tb;
+    reg         clk_tb = 1'b0;
+    reg         rst_tb;
+    wire [31:0] OUT_tb;
+
+    always #10 clk_tb = ~clk_tb;
+
+    RISC_V_top dut(
+        .clk(clk_tb),
+        .rst(rst_tb),
+        .IN(IN_tb),
+        .OUT(OUT_tb)
+      //.Сигналы внешнего мод-ля(Сигналы внутреннего мод-ля)
+    );
+
+    initial begin
+        rf(10, clk_tb, 1'b0);
+        #40;
+        $stop;
+    end
+
+    task rf;
+        input [31:0] in_op;
+        input        clk_op;
+        input        rst_op;
+    begin
+        IN_tb = in_op;
+        clk_tb = clk_op;
+        rst_tb = rst_op;
+        #100;
+        
+        $display("Out is %b", OUT_tb);
+    end
+    endtask
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*module RISC_V_tb();
     // reg - могу изменять/регулировать значения
     reg clk_tb;
     reg rst_tb;
@@ -61,45 +118,6 @@ module RISC_V_tb();
         #50; 
         end
     
-endmodule
-
-
-/*module RISC_V_tb();
-
-    reg  [31:0] IN_tb;
-    reg         clk_tb = 1'b0;
-    reg         rst_tb;
-    wire [31:0] OUT_tb;
-
-    always #10 clk_tb = ~clk_tb;
-
-    RISC_V_top dut(
-        .clk(clk_tb),
-        .rst(rst_tb),
-        .IN(IN_tb),
-        .OUT(OUT_tb)
-      //.Сигналы внешнего мод-ля(Сигналы внутреннего мод-ля)
-    );
-
-    initial begin
-        rf(10, clk_tb, 1'b0);
-        #10;
-        $stop;
-    end
-
-    task rf;
-        input [31:0] in_op;
-        input        clk_op;
-        input        rst_op;
-    begin
-        IN_tb = in_op;
-        clk_tb = clk_op;
-        rst_tb = rst_op;
-        #300;
-        
-        $display("Out is %b", OUT_tb);
-    end
-    endtask
 endmodule*/
 
 

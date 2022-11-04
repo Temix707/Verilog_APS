@@ -211,3 +211,14 @@ launch_simulation
 source RISC_V_tb.tcl
 relaunch_sim
 relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
