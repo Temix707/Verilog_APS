@@ -15279,3 +15279,43 @@ selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, -54, 229); // n (o, cr
 // TclEventType: WAVEFORM_UPDATE_WAVEFORM
 // WARNING: HEventQueue.dispatchEvent() is taking  2520167 ms.
 // HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 1:38:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 2:08:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 2:38:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 3:08:22 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 3:38:22 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  41526519 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 3:11:14 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 3:41:14 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 4:11:14 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 4:41:15 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 5:11:15 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 5:41:15 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 6:11:15 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 6:41:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 7:11:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 7:41:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 8:11:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1071909 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 8:41:19 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 9:11:19 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 9:41:19 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 10:11:20 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 10:41:20 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 11:11:20 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/5/22, 11:41:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 12:11:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 12:41:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 1:11:21 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 1:41:22 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 2:11:22 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  35127992 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 35128926 ms. Increasing delay to 7000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 12:07:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 12:37:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 1:07:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 1:37:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1147 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 2:07:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4064 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 2:37:20 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 932 MB. GUI used memory: 261 MB. Current time: 11/6/22, 3:07:20 PM MSK

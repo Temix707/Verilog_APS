@@ -1,0 +1,568 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 9784
+License: Customer
+
+Current time: 	Wed Nov 09 20:04:20 MSK 2022
+Time zone: 	Moscow Standard Time (Europe/Moscow)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 106 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	artem
+User home directory: C:/Users/artem
+User working directory: C:/Vivado_project/RISC_V_mem_rf
+User country: 	RU
+User language: 	ru
+User locale: 	ru_RU
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Vivado_project/RISC_V_mem_rf/vivado.log
+Vivado journal file location: 	C:/Vivado_project/RISC_V_mem_rf/vivado.jou
+Engine tmp dir: 	C:/Vivado_project/RISC_V_mem_rf/.Xil/Vivado-9784-T7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	195 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 711 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Vivado_project\RISC_V_mem_rf\RISC_V_mem_rf.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.xpr 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 112 MB (+115320kb) [00:00:07]
+// [Engine Memory]: 686 MB (+568257kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  3180 ms.
+// Tcl Message: open_project C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 711 MB. GUI used memory: 56 MB. Current time: 11/9/22, 8:04:21 PM MSK
+// Project name: RISC_V_mem_rf; location: C:/Vivado_project/RISC_V_mem_rf; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// a (cr): Critical Messages: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 67 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cr)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// I (cr): Settings: addNotify
+// [Engine Memory]: 729 MB (+8187kb) [00:01:24]
+// WARNING: HEventQueue.dispatchEvent() is taking  1570 ms.
+// Elapsed time: 45 seconds
+expandTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 8); // L (E, I)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 12, false); // L (E, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// [GUI Memory]: 126 MB (+8930kb) [00:02:12]
+dismissDialog("Settings"); // I (cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 2); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper_RISC_V (wrapper_RISC_V.v)]", 6); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory Initialization Files]", 8); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 11); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 14); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 16); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut1 : IM (IM.v)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 2, true); // B (F, cr) - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 731 MB. GUI used memory: 73 MB. Current time: 11/9/22, 8:06:41 PM MSK
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper_RISC_V (wrapper_RISC_V.v)]", 3, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper_RISC_V (wrapper_RISC_V.v)]", 3, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 2, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 2, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 2); // i (h, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut1 : IM (IM.v)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut1 : IM (IM.v)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut2 : RF (RF.v)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut2 : RF (RF.v)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RF.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.v", 5); // i (h, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, wrapper_RISC_V (wrapper_RISC_V.v)]", 6); // B (F, cr)
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RF.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wrapper_RISC_V.v", 5); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cr)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// I (cr): Settings: addNotify
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 2); // i (h, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/9/22, 8:36:41 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/9/22, 9:06:41 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/9/22, 9:36:42 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/9/22, 10:06:42 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/9/22, 10:36:42 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/9/22, 11:06:43 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  898939 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 69 MB. Current time: 11/9/22, 11:36:46 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 12:06:47 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 12:36:47 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 1:06:47 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 1:36:48 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 1:55:50 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 69 MB. Current time: 11/10/22, 5:48:17 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1367 ms. Increasing delay to 4101 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 6:18:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/10/22, 6:48:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  43200529 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 69 MB. Current time: 11/11/22, 6:52:26 AM MSK
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 43201309 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 69 MB. Current time: 11/11/22, 5:25:45 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 5:55:46 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 6:25:46 PM MSK
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 520 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 994 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 993 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 993 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 573 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 6:55:46 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 7:25:47 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 7:55:47 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 8:25:47 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 103 MB. Current time: 11/11/22, 8:55:47 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 9:25:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 9:55:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 10:25:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 10:55:49 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  5112 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 11:25:50 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/11/22, 11:55:51 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 12:25:55 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 12:55:55 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 1:25:56 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 1:55:56 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 2:25:56 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 2:55:56 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 3:25:57 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  30495126 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 71 MB. Current time: 11/12/22, 12:14:17 PM MSK
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 30496031 ms. Increasing delay to 4000 ms.
+// Elapsed time: 232507 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 99 seconds
+selectCodeEditor("RISC_V_top.v", 495, 328); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 70 MB. Current time: 11/12/22, 12:44:17 PM MSK
+// Elapsed time: 14 seconds
+selectCodeEditor("RISC_V_top.v", 489, 456); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 180, 418); // ch (w, cr)
+// Elapsed time: 50 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aA
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 15); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, RISC_V_tb (RISC_V_tb.v)]", 17, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, RISC_V_tb (RISC_V_tb.v)]", 17, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim' INFO: [SIM-utils-51] Simulation object is 'sim_1' INFO: [SIM-utils-54] Inspecting design source files for 'RISC_V_tb' in fileset 'sim_1'... INFO: [SIM-utils-43] Exported 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim/ram.txt' INFO: [SIM-utils-43] Exported 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim/rf.txt' INFO: [USF-XSim-97] Finding global include files... INFO: [USF-XSim-98] Fetching design files from 'sim_1'... INFO: [USF-XSim-2] XSim::Compile design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim' 
+// Tcl Message: "xvlog --incr --relax -prj RISC_V_tb_vlog.prj" 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 774.637 ; gain = 0.000 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '6' seconds INFO: [USF-XSim-3] XSim::Elaborate design INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim' 
+// Tcl Message: "xelab -wto c4fd012fab4f4532b2ff94eb4d660d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RISC_V_tb_behav xil_defaultlib.RISC_V_tb xil_defaultlib.glbl -log elaborate.log" 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Vivado Simulator 2019.2 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved. Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto c4fd012fab4f4532b2ff94eb4d660d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot RISC_V_tb_behav xil_defaultlib.RISC_V_tb xil_defaultlib.glbl -log elaborate.log  Using 2 slave threads. Starting static elaboration Pass Through NonSizing Optimizer Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "RISC_V_tb_behav -key {Behavioral:sim_1:Functional:RISC_V_tb} -tclbatch {RISC_V_tb.tcl} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: Vivado Simulator 2019.2 
+// TclEventType: SIMULATION_CREATE_SIMULATION_OBJECT
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// PAPropertyPanels.initPanels (RISC_V_tb.v) elapsed time: 0.3s
+// WARNING: HEventQueue.dispatchEvent() is taking  3457 ms.
+// Tcl Message: Time resolution is 1 ps 
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// Elapsed time: 20 seconds
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_UPDATE_PROTOCOL_INSTANCE_TREE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// TclEventType: WAVEFORM_MODEL_EVENT
+// Tcl Message: source RISC_V_tb.tcl 
+// Tcl Message: # set curr_wave [current_wave_config] # if { [string length $curr_wave] == 0 } { #   if { [llength [get_objects]] > 0} { #     add_wave / #     set_property needs_save false [current_wave_config] #   } else { #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console." #   } # } 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 78 MB. Current time: 11/12/22, 12:45:58 PM MSK
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_DELAYED_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// TclEventType: SIMULATION_CLEAR_CURRENT_LINE
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: SIMULATION_OBJECT_TREE_RESTORED
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: SIMULATION_UPDATE_LATEST_TIME
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: SIMULATION_CURRENT_SCOPE_CHANGED
+// TclEventType: SIMULATION_CURRENT_STACK_CHANGED
+// TclEventType: SIMULATION_UPDATE_STACK_FRAMES
+// TclEventType: SIMULATION_CURRENT_STACK_FRAME_CHANGED
+// TclEventType: SIMULATION_UPDATE_LOCALS
+// TclEventType: SIMULATION_UPDATE_SCOPE_TREE
+// TclEventType: SIMULATION_UPDATE_STACKS
+// TclEventType: SIMULATION_UPDATE_OBJECT_TREE
+// TclEventType: SIMULATION_STOPPED
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: # run 1000ns 
+// Tcl Message: Out is xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx $stop called at time : 140 ns : File "C:/Vivado_project/RISC_V_mem_rf/RISC_V_mem_rf.srcs/sim_1/new/RISC_V_tb.v" Line 23 
+// TclEventType: SIMULATION_UPDATE_SIMULATION_STATE
+// Tcl Message: xsim: Time (s): cpu = 00:00:19 ; elapsed = 00:00:09 . Memory (MB): peak = 813.633 ; gain = 22.941 
+// Tcl Message: INFO: [USF-XSim-96] XSim completed. Design snapshot 'RISC_V_tb_behav' loaded. INFO: [USF-XSim-97] XSim simulation ran for 1000ns 
+// Tcl Message: launch_simulation: Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 813.633 ; gain = 38.996 
+// 'd' command handler elapsed time: 23 seconds
+dismissDialog("Run Simulation"); // e (cr)
+// TclEventType: WAVEFORM_MODEL_EVENT
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_MODEL_EVENT
+// [GUI Memory]: 139 MB (+6356kb) [64:46:48]
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 77 MB. Current time: 11/12/22, 1:16:03 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/12/22, 1:46:03 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  10800986 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/12/22, 4:57:24 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10802442 ms. Increasing delay to 32407326 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  74774674 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 1:43:46 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  6726788 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 3:44:12 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  414608 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 4:14:35 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 4:44:36 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  747794 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 5:14:39 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1028305 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 5:51:41 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4538509 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 7:10:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 7:40:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 8:10:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 8:40:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 9:10:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/13/22, 9:40:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 12:42:15 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 1:12:15 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  30068 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 1:42:15 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  39757701 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 12:49:52 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  7493707 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 3:17:15 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 3:47:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 4:17:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 4:47:16 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 5:17:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 5:47:17 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 9 ms. Decreasing delay to 2009 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 6:17:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  2874544 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 7:32:11 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1215 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 8:02:11 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 8:32:11 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 9:02:11 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 9:32:11 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 10:02:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 10:32:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 11:02:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/14/22, 11:32:13 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 12:02:13 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 12:32:13 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 1:02:13 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  31748328 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 31749525 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 10:02:40 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 10:32:40 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 11:02:40 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 11:32:41 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 12:02:41 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  10801273 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/15/22, 3:08:51 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 10802338 ms. Increasing delay to 32407014 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1243 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  66279760 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1187 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 9:33:40 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 10:03:39 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 10:35:04 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  423203 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 1:59:07 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  15709412 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 6:21:03 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1188 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 6:51:05 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 7:21:06 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 7:51:06 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 8:21:06 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 8:51:06 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 9:21:07 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1037 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  7383882 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1087 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/16/22, 11:45:19 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 12:15:19 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 12:45:19 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 1:15:19 AM MSK
+// Elapsed time: 390886 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Untitled 1", 6); // i (h, cr)
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, OUT_tb[31:0]]", 3); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+collapseTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, OUT_tb[31:0]]", 3); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 1:20:50 AM MSK
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_FIT, "Waveform Viewer_zoom_fit"); // E (f, cr)
+expandTree(RDIResource.WaveformNameTree_WAVEFORM_NAME_TREE, "[true, OUT_tb[31:0]]", 3); // a (r, cr)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 1:20:59 AM MSK
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 1:21:00 AM MSK
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - RISC_V_tb", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+dismissDialog("Confirm Close"); // A (cr)
+// TclEventType: WAVEFORM_CLOSE_WCFG
+closeView(RDIResource.RDIViews_WAVEFORM_VIEWER, "Untitled 1"); // w
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cr)
+closeTask("Simulation", "Behavioral Simulation - Functional - sim_1 - RISC_V_tb", "DesignTask.SIMULATION");
+// A (cr): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bB (cr):  Close : addNotify
+// TclEventType: SIMULATION_CLOSE_SIMULATION
+dismissDialog("Confirm Close"); // A (cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  1510 ms.
+// Tcl Message: close_sim 
+// Tcl Message: INFO: [Simtcl 6-16] Simulation closed 
+// Tcl Message: close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 813.633 ; gain = 0.000 
+dismissDialog("Close"); // bB (cr)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("RISC_V_top.v", 190, 367); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 206, 306); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 224, 290); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 291, 226); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 267, 182); // ch (w, cr)
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 1107 ms to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 1:51:05 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 2:21:05 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  645607 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  35409995 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 12:29:28 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 3:02:51 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 3:32:51 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 4:02:51 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 4:32:52 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 20 ms. Decreasing delay to 2020 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 5:02:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 5:32:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 6:02:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 6:32:53 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 77 MB. Current time: 11/17/22, 7:02:53 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 7:32:54 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/17/22, 8:02:54 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  15077500 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/18/22, 12:25:37 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/18/22, 12:55:37 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4569 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/18/22, 1:25:42 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  43200376 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1156 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/18/22, 1:32:36 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  28396543 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/18/22, 9:25:59 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 28397563 ms. Increasing delay to 85192689 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  43200967 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 9:53:37 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4361139 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 11:06:25 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 2:07:34 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 9:33:34 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 10:03:33 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 10:33:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 11:03:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/19/22, 11:33:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 12:03:38 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 12:33:38 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 1:03:38 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 1:33:38 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  41059547 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 1:10:56 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1155 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 1:40:56 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 2:10:56 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 2:40:56 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 3:10:57 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 3:40:57 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 4:10:57 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 4:40:58 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 5:10:58 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 5:40:58 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 6:10:58 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 6:40:59 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 7:10:59 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 7:40:59 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 8:11:00 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 8:41:00 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 9:11:00 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 9:41:01 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/20/22, 10:11:01 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  43199388 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1143 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 10:38:56 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  5306906 ms.
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 623ms to process. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 12:07:32 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 12:37:34 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 1:07:34 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 1:37:35 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 2:07:35 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 2:37:35 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 3:07:36 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 3:37:36 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 4:07:36 PM MSK
+// Elapsed time: 400401 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 4:37:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 5:07:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 5:37:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 6:07:37 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 6:37:38 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 7:07:38 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 7:37:38 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 8:07:39 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4258284 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 9:48:01 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1142 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 10:18:02 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 10:48:03 PM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 26 ms. Decreasing delay to 2026 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1023 ms. Increasing delay to 3069 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 11:18:06 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/21/22, 11:48:07 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 76 MB. Current time: 11/22/22, 12:18:09 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1243 ms.
