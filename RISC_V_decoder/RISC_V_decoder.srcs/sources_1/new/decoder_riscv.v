@@ -2,12 +2,11 @@
 /*Под rd подразумевается 5-битный адрес регистра назначения (register destination),
  rs1 и rs2 - 5-битные адреса регистров источников (операндов) (register source)*/
  
- 
 `define RESET_ADDR 32'h00000000
 
 `define ALU_OP_WIDTH  5
 
-`define ALU_ADD   5'b00000  // 
+`define ALU_ADD   5'b00000
 `define ALU_SUB   5'b01000
 
 `define ALU_XOR   5'b00100
@@ -176,7 +175,6 @@ module decoder_riscv (
     
                 ///////////////////////////////////////////// Интерфейс памяти Type I
                 `LOAD_OPCODE:   begin   // Записать в rd данные из памяти по адресу rs1+imm
-                    //ex_op_a_sel_o
                     gpr_we_a_o = 1'b1;
                     wb_src_sel_o = 1'b1;
                     mem_req_o = 1'b1;
@@ -211,11 +209,10 @@ module decoder_riscv (
                 end
                  
                 
-                ///////////////////////////////////////////// Type B
+                ///////////////////////////////////////////// Type B (Инструкции условного перехода)
                 `BRANCH_OPCODE: begin   // Увеличить счетчик команд на значение imm, если верен результат сравнения rs1 и rs2
-                    // ex_op_a_sel_o, ex_op_b_sel_o
-                    ex_op_a_sel_o = 2'b0;
-                    ex_op_b_sel_o = 3'b0; //3'h3;
+                    ex_op_a_sel_o = 2'h0;
+                    ex_op_b_sel_o = 3'h0; //3'h3;
                     branch_o = 1'b1;
                     case(funct3)
                         3'h0: alu_op_o = `ALU_EQ;
@@ -228,11 +225,11 @@ module decoder_riscv (
                     endcase
                 end
                 
-                ///////////////////////////////////////////// Type J
+                ///////////////////////////////////////////// Type J (Инструкции безусловгого перехода)
                 `JAL_OPCODE:    begin   // Записать в rd следующий адрес счетчика команд, увеличить счетчик команд на значение imm
                     jal_o = 1'b1;
                     ex_op_a_sel_o = 2'h1;
-                    ex_op_b_sel_o = 3'h1; //3'h4
+                    ex_op_b_sel_o = 3'h4;
                     alu_op_o = `ALU_ADD;
                     wb_src_sel_o = 1'b0;
                     gpr_we_a_o = 1'b1;

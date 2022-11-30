@@ -8,10 +8,233 @@ module RISC_V_top
         output [BIT_D-1:0] OUT
     );
     
-    initial begin
-        
+    wire [ADR_8-1:0] adr;
+    wire [BIT_D-1:0] instr;
+    
+/////////////////  CODE  /////////////////
+    
+    /// Decoder ///
+    
+    wire [1:0]  ex_op_a_sel;
+    wire [2:0]  ex_op_b_sel;
+    wire        alu_op;
+    wire        mem_req;
+    wire        mem_we;
+    wire        mem_size;
+    wire        gpr_we_a;
+    wire        wb_src_sel;
+    wire        branch;
+    wire        jal;
+    wire        jalr;
+    wire        illegal_instr;
+    
+    
+    
+    
+    /// SE ///
+    
+    wire [11:0] imm_I;
+    wire [11:0] imm_S;
+    wire [11:0] imm_J;
+    wire [11:0] imm_B;
+    
+    assign imm_I [11:0] = instr [31:20];
+    assign imm_S [11:0] = {instr[31:20],instr[11:7]};
+    assign imm_J [11:0] = {instr[31], instr[19:12], instr[20], instr[30:21]};
+    assign imm_B [11:0] = {instr[31], instr[7], instr[30:25], instr[11:8]};
+    
+    wire [31:0] SE_I;
+    wire [31:0] SE_S;
+    wire [31:0] SE_J;
+    wire [31:0] SE_B;
+    
+    assign SE_I = {{20{imm_I[11]}}, imm_I[11:0]}; 
+    assign SE_S = {{20{imm_S[11]}}, imm_S[11:0]}; 
+    assign SE_J = {{11{imm_J[20]}}, imm_J[11:0], 1'b0}; 
+    assign SE_B = {{19{imm_B [11]}}, imm_B[11:0], 1'b0}; 
+
+    
+    /// IM and Programm counter///
+    
+    /*wire branch;
+    wire jal;
+    wire jalr;*/
+    
+    wire comp_flag;
+    
+    wire br_comp_and;
+    wire and_jal_or;
+    
+    wire [31:0] mux2x1_immI_B;
+    wire [31:0] mux2x1_4_imm;
+    
+    wire        EN;
+    reg [31:0] PC = 32'd0;
+    
+    assign  EN = 1'd1; 
+    
+    assign br_comp_and = branch & comp_flag;
+    assign and_jal_or = jal | br_comp_and;
+    
+    assign mux2x1_const_J_B = branch ? imm_B : imm_J;
+    assign mux2x1_4_imm = and_jal_or ? mux2x1_const_J_B : 32'd4;
+    
+    wire [31:0] RD1; 
+    wire mux2x1_instr;       
+    assign  mux2x1_instr = jalr ? (RD1 + imm_I) : mux2x1_4_imm;
+    assign adr = PC;
+    
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            PC <= 32'd0;
+        end 
+        else if (EN) begin
+            PC <= PC + mux2x1_instr;
+        end else begin
+            PC <= PC;
+        end
     end
     
+    
+
+    
+    /// RF ///
+    
+  //wire        WE3;     
+    wire [4:0]  A1;
+    wire [4:0]  A2;
+    wire [4:0]  A3;
+    wire [31:0] WD3;
+    
+  //wire [31:0] RD1;      
+    wire [31:0] RD2;
+    
+    assign A1 = instr[19:15];
+    assign A2 = instr[24:20];
+    assign A3 = instr[11:7];
+    
+    
+    assign OUT = RD1; ////////
+    
+    
+    /// MUX 3x1  the first number for alu///
+    
+  //wire [1:0] ex_op_a_sel;
+    wire [31:0] mux3x1_f;
+    assign mux3x1_f = (ex_op_a_sel == 2'b00) ? RD1 : ((ex_op_a_sel == 2'b01) ? PC : ((ex_op_a_sel == 2'b11) ? 32'd0 : 32'd0)); 
+                        
+    
+    /// MUX 5x1 the second number for alu///
+    
+  //wire [2:0] ex_op_b_sel;
+    wire [31:0] mux5x1_s;
+    assign mux5x1_s = (ex_op_b_sel == 3'd0) ? RD2 : ((ex_op_b_sel == 3'd1) ? imm_I : ((ex_op_b_sel == 3'd2) ? {instr[31:12], 11'd0} : ((ex_op_b_sel == 32'd3) ? imm_S : ((ex_op_b_sel == 32'd4) ? 32'd4 : 32'd0)))); 
+    
+    
+    /// ALU ///
+    
+  //wire comp;
+    wire [4:0] ALUOp; 
+    wire [31:0]  Result;
+    assign ALUOp = instr[27:23];
+    
+    
+    /// Data Memory ///
+    
+    wire [31:0] A;
+    wire [31:0] RD;
+    assign A = Result;
+    
+    
+    /// MUX 2x1///
+    
+  //wire wb_src_sel;
+    wire [31:0] mux2x1_o;
+    assign mux2x1_WD3 = wb_src_sel ? RD : Result;
+    assign WD3 = mux2x1_WD3;
+    
+        
+    
+    
+/////////////////  Connection  /////////////////
+     //.Сигн.внешн.мод(Сигн.внутр.мод)
+     /// Decoder ///
+     
+     decoder_riscv dut_dec(
+        .fetched_instr_i(fetched_instr),    // Инструкция для декодирования, считанная из памяти инструкций   
+  
+        .ex_op_a_sel_o(ex_op_a_sel),      // Управляющий сигнал мультиплексора для выбора первого операнда АЛУ
+        .ex_op_b_sel_o(ex_op_b_sel),      // Управляющий сигнал мультиплексора для выбора второго операнда АЛУ 
+        .alu_op_o(alu_op),           // Операция АЛУ
+        .mem_req_o(mem_req),          // Запрос на доступ к памяти (часть интерфейса памяти), 1 - обращение к памяти - считать или записать
+        .mem_we_o(mem_we),           // Сигнал разрешения записи в память. 1, если необходимо записать данные в память, и 0 - если считать из памяти
+        .mem_size_o(mem_size),         // Управляющий сигнал для выбора размера слова при чтении-записи в память (часть интерфейса памяти) 
+        .gpr_we_a_o(gpr_we_a),         // Сигнал разрешения записи в регистровый файл  
+        .wb_src_sel_o(wb_src_sel),       // Управляющий сигнал мультиплексора для выбора данных, записываемых в регистровый фай 
+        .illegal_instr_o(illegal_instr),    // Сигнал о некорректной инструкции (на схеме не отмечен)
+        .branch_o(branch),           // Сигнал об инструкции условного перехода
+        .jal_o(jal),              // Сигнал об инструкции безусловного перехода jal
+        .jalr_o(jalr) 
+     );
+     
+     
+    /// IM and Programm counter///
+    IM dut_im(
+        .adr_im(adr),
+        
+        .instr_im(instr)
+     );
+    
+    
+    /// RF ///    
+    RF dut_rf(
+        .clk(clk),
+        .WE3_rf(gpr_we_a),
+        .A1_rf(A1),
+        .A2_rf(A2),
+        .A3_rf(A3),    //WA
+        .WD3_rf(WD3), 
+        
+        .RD1_rf(RD1),
+        .RD2_rf(RD2) 
+     );
+    
+    
+    /// ALU ///
+    ALU dut_alu(
+        .RD1_alu(RD1),
+        .RD2_alu(RD2),
+        .ALUOp_alu(alu_op),
+    
+        .Flag(comp_flag),   
+        .Result(Result) 
+     );    
+    
+    
+    /// Data Memory ///
+    data_mem dut_mem(
+        .clk(clk),
+        .A_dm(A),
+        .WD_dm(RD2),
+        .WE_dm(mem_we),
+        .RD_dm(RD),
+        .I_mem_req(mem_req),
+        //.I_mem_size(mem_size),
+        .mem_we(mem_we)
+     );
+    
+    
+endmodule    
+    
+    
+    
+    
+    
+    
+    
+    
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+    /*
     /// IM and Programm counter///
     wire [ADR_8-1:0] adr;
     wire [BIT_D-1:0] instr;
@@ -61,7 +284,7 @@ module RISC_V_top
      
      
    /// RF ///
-    wire             WE3;
+    wire       WE3;
     wire [4:0] A1;
     wire [4:0] A2;
     wire [4:0] A3_WA;
@@ -102,5 +325,20 @@ module RISC_V_top
         .Flag(Flag),
         .Result(Result)
     );
+    
+    /// Decoder ///
+    
+    wire [31:0] flech_instr;
+    assign flech_instr = instr[31:0];
+    
+    decoder_riscv(
+        .fetched_instr_i(flech_instr)
+    );
+    
+    
+    /// Data Memory ///
+    
+    */
+    
 
-endmodule
+//endmodule

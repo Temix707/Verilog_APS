@@ -4,5 +4,31 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto 97664f8023
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'fetched_instr_i' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:164]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'alu_op_o' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:168]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 3 for port 'mem_size_o' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:171]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 5 for port 'ALUOp_alu' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:207]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'I_mem_req' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:221]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'mem_we' [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:223]
+WARNING: [VRFC 10-5021] port 'I_mem_size' is not connected on this instance [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:215]
+WARNING: [VRFC 10-3705] select index 20 into 'imm_J' is out of bounds [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:53]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v" Line 1. Module RISC_V_top doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v" Line 75. Module decoder_riscv doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/IM.v" Line 1. Module IM doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v" Line 1. Module RF doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/ALU.v" Line 18. Module ALU doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v" Line 1. Module data_mem doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [VRFC 10-3283] element index 20 into 'imm_J' is out of bounds [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:53]
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.IM
+Compiling module xil_defaultlib.RF
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.data_mem
+Compiling module xil_defaultlib.RISC_V_top
+Compiling module xil_defaultlib.RISC_V_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot RISC_V_tb_behav

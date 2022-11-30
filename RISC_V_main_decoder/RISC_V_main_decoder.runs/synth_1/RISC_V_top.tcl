@@ -31,11 +31,14 @@ set_property ip_cache_permissions {read write} [current_project]
 read_mem {
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/ram.txt
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/rf.txt
+  C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data.txt
 }
 read_verilog -library xil_defaultlib {
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/ALU.v
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/IM.v
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RF.v
+  C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v
+  C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v
   C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being

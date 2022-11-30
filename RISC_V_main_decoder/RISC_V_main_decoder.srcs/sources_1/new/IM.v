@@ -12,6 +12,7 @@ module IM
     initial $readmemb("ram.txt", RAM);
     
     assign instr_im = RAM[adr_im];   // реализация порта на чтение (передает 32-х битное слово (инструкцию))
+    //  получатель <- отправитель
      
      
 endmodule

@@ -1,0 +1,1700 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 7232
+License: Customer
+
+Current time: 	Thu Nov 24 17:19:40 MSK 2022
+Time zone: 	Moscow Standard Time (Europe/Moscow)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 125
+Available screens: 1
+Available disk space: 70 GB
+Default font: family=Segoe UI,name=Segoe UI,style=plain,size=15
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	artem
+User home directory: C:/Users/artem
+User working directory: C:/Vivado_project/RISC_V_main_decoder
+User country: 	RU
+User language: 	ru
+User locale: 	ru_RU
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/artem/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Vivado_project/RISC_V_main_decoder/vivado.log
+Vivado journal file location: 	C:/Vivado_project/RISC_V_main_decoder/vivado.jou
+Engine tmp dir: 	C:/Vivado_project/RISC_V_main_decoder/.Xil/Vivado-7232-T7
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	198 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 722 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: C:\Vivado_project\RISC_V_main_decoder\RISC_V_main_decoder.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 113 MB (+116136kb) [00:00:06]
+// [Engine Memory]: 669 MB (+550410kb) [00:00:06]
+// WARNING: HEventQueue.dispatchEvent() is taking  2318 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// [Engine Memory]: 721 MB (+18852kb) [00:00:08]
+// Project name: RISC_V_main_decoder; location: C:/Vivado_project/RISC_V_main_decoder; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 732 MB. GUI used memory: 56 MB. Current time: 11/24/22, 5:19:41 PM MSK
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 1); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory Initialization Files]", 7); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 10); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 12); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Utility Sources]", 14); // B (F, cr)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 13); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 1, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 1, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 8, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, RISC_V_tb (RISC_V_tb.v)]", 11, true); // B (F, cr) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, RISC_V_tb (RISC_V_tb.v)]", 11, true, false, false, false, false, true); // B (F, cr) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Data_mem (Data_mem.v)]", 13, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Data_mem (Data_mem.v)]", 13, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder (Decoder.v)]", 14, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Decoder (Decoder.v)]", 14, false, false, false, false, false, true); // B (F, cr) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory Initialization Files]", 15); // B (F, cr)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_tb.v", 3); // i (h, cr)
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v)]", 1); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut1 : IM (IM.v)]", 2, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut1 : IM (IM.v)]", 2, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut2 : RF (RF.v)]", 3, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut2 : RF (RF.v)]", 3, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 4); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RF.v", 5); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ALU.v", 6); // i (h, cr)
+selectCodeEditor("ALU.v", 454, 74); // ch (w, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cr)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [Engine Memory]: 758 MB (+797kb) [00:01:37]
+// I (cr): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1475 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 69 MB. Current time: 11/24/22, 5:21:11 PM MSK
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 8, true); // L (E, I) - Node
+expandTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 8); // L (E, I)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 12, false); // L (E, I)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+// [GUI Memory]: 127 MB (+8942kb) [00:01:51]
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+// WARNING: HEventQueue.dispatchEvent() is taking  153483 ms.
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 770ms to process. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 5:51:34 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1577828 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 6:21:37 PM MSK
+// Elapsed time: 4549 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Decoder.v", 4); // i (h, cr)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, RISC_V_tb (RISC_V_tb.v), dut : RISC_V_top (RISC_V_top.v)]", 15); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectButton(PAResourceItoN.MainToolbarMgr_RUN, (String) null); // az (f, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_RUN_SYNTHESIS, "Run Synthesis"); // ai (cr)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bB (cr):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cr): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bB (cr):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cr)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 6 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Thu Nov 24 18:37:55 2022] Launched synth_1... Run output will be captured here: C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 4 seconds
+dismissDialog("Starting Design Runs"); // bB (cr)
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("Data_mem.v", 621, 455); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// ad (cr): Unable to Open File: addNotify
+dismissDialog("Unable to Open File"); // ad (cr)
+selectCodeEditor("Data_mem.v", 375, 183); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("Data_mem.v", 230, 65); // ch (w, cr)
+selectCodeEditor("Data_mem.v", 224, 98); // ch (w, cr)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// aj (cr): Synthesis Completed: addNotify
+// [GUI Memory]: 135 MB (+1751kb) [01:19:15]
+dismissDialog("Synthesis Completed"); // aj (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+// ad (cr): Unable to Open File: addNotify
+selectButton(PAResourceOtoP.OpenFileAction_CANCEL, "Cancel"); // a (ad)
+dismissDialog("Unable to Open File"); // ad (cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Decoder (Decoder.v)]", 6, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cr)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/Decoder.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/Decoder.v 
+// Elapsed time: 15 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "decoder_riscv"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 13 seconds
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: close [ open C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v 
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_riscv (decoder_riscv.v)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_riscv (decoder_riscv.v)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("decoder_riscv.v", 3, 535); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 203, 95); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Data_mem.v", 5); // i (h, cr)
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Data_mem (Data_mem.v)]", 5, false, false, false, false, true, false); // B (F, cr) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ai (ao, Popup.HeavyWeightWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (cr): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (cr)
+// Tcl Message: export_ip_user_files -of_objects  [get_files C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/Data_mem.v] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/Data_mem.v 
+// aE (cr): Remove Sources: addNotify
+// bB (aE):  Remove Sources : addNotify
+dismissDialog("Remove Sources"); // bB (aE)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (f, cr)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cr): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (E, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "data_mem"); // ac (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c (cr)
+// Tcl Message: close [ open C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v 
+// I (cr): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("OptionPane.button", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV, (String) null); // E (H, cr)
+// Tcl Message: update_compile_order -fileset sources_1 
+// Run Command: PAResourceCommand.PACommandNames_TOGGLE_VIEW_NAV
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, data_mem (data_mem.v)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, data_mem (data_mem.v)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, data_mem (data_mem.v)]", 5, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, data_mem (data_mem.v)]", 5, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("data_mem.v", 92, 69); // ch (w, cr)
+selectCodeEditor("data_mem.v", 39, 35); // ch (w, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 4, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RISC_V_top (RISC_V_top.v), dut3 : ALU (ALU.v)]", 4, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_riscv (decoder_riscv.v)]", 6, false); // B (F, cr)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, decoder_riscv (decoder_riscv.v)]", 6, false, false, false, false, false, true); // B (F, cr) - Double Click
+selectCodeEditor("decoder_riscv.v", 253, 9); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // aa (q, cr)
+selectCodeEditor("decoder_riscv.v", 265, 201); // ch (w, cr)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+selectMenu(RDIResourceCommand.RDICommands_CUSTOM_COMMANDS, "Custom Commands"); // af (cr)
+selectMenuItem(RDIResourceCommand.RDICommands_SETTINGS, "Settings..."); // ai (cr)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // aa (q, cr)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// I (cr): Settings: addNotify
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+dismissDialog("Settings"); // I (cr)
+selectCodeEditor("decoder_riscv.v", 236, 116); // ch (w, cr)
+// Elapsed time: 83 seconds
+selectCodeEditor("decoder_riscv.v", 217, 118); // ch (w, cr)
+typeControlKey((HResource) null, "decoder_riscv.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("decoder_riscv.v", 410, 232); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 429, 143); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 261, 180); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 259, 115); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 117, 177); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 117, 177, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALU_AND"); // l (aP, cr)
+selectCodeEditor("decoder_riscv.v", 338, 90); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 118, 148); // ch (w, cr)
+// Elapsed time: 47 seconds
+selectCodeEditor("decoder_riscv.v", 313, 257); // ch (w, cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("decoder_riscv.v", 304, 267); // ch (w, cr)
+// Elapsed time: 26 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ALU_AND"); // l (aP, cr)
+selectCodeEditor("decoder_riscv.v", 442, 147); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 239, 289); // ch (w, cr)
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "decoder_riscv.v", 'v'); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 312, 320); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("decoder_riscv.v", 7, 241); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 329, 273); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 221, 237); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 221, 237, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "b00111"); // l (aP, cr)
+selectCodeEditor("decoder_riscv.v", 489, 287); // ch (w, cr)
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // E (f, cr)
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // E (f, cr)
+selectCodeEditor("decoder_riscv.v", 349, 225); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("decoder_riscv.v", 349, 225); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("decoder_riscv.v", 370, 147); // ch (w, cr)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectCodeEditor("RISC_V_top.v", 488, 212); // ch (w, cr)
+// Elapsed time: 213 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 2); // i (h, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 79 MB. Current time: 11/24/22, 6:51:38 PM MSK
+// Elapsed time: 87 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 18 seconds
+selectCodeEditor("RISC_V_top.v", 263, 94); // ch (w, cr)
+// Elapsed time: 78 seconds
+selectCodeEditor("RISC_V_top.v", 390, 130); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 153, 628); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 147, 266); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 168, 549); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 28 seconds
+selectCodeEditor("RISC_V_top.v", 185, 565); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("RISC_V_top.v", 175, 199); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RF.v", 3); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_tb.v", 0); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectCodeEditor("RISC_V_top.v", 123, 487); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 193 seconds
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+selectCodeEditor("decoder_riscv.v", 334, 449); // ch (w, cr)
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("RISC_V_top.v", 431, 471); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("RISC_V_top.v", 208, 509); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 208, 509, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 73, 608); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 249, 566); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+selectCodeEditor("decoder_riscv.v", 148, 406); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 148, 406, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("RISC_V_top.v", 95, 579); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 95, 579, false, false, false, false, true); // ch (w, cr) - Double Click
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 135, 582); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 159, 577); // ch (w, cr)
+// Elapsed time: 54 seconds
+selectCodeEditor("RISC_V_top.v", 357, 227); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 484ms to process. Increasing delay to 3000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  542939 ms.
+// Elapsed time: 705 seconds
+selectCodeEditor("RISC_V_top.v", 206, 604); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 100, 84); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 331, 615); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 127, 366); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 134, 317); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 119, 556); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 126, 559); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 245, 243); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 121, 469); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 24, 479); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 209, 473); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 220, 463); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 231, 450); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 118, 474); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 216, 357); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 126, 452); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 138, 281); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 172, 540); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 125, 413); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 205, 644); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 196, 426); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 218, 426); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 243, 416); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 132, 312); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 163, 295); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("RISC_V_top.v", 165, 303); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 472, 298); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 378, 309); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 84, 456); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 208, 426); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 228, 435); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 211, 427); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 83, 478); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 71, 495); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("RISC_V_top.v", 222, 501); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 314, 462); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("RISC_V_top.v", 323, 329); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 71, 477); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 145, 490); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 318, 515); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 338, 450); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 451, 263); // ch (w, cr)
+// Elapsed time: 24 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 425, 267); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("RISC_V_top.v", 67, 608); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 170, 323); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 70, 602); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 277, 265); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 218, 171); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 64, 160); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 238, 162); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 276, 185); // ch (w, cr)
+// Elapsed time: 47 seconds
+selectCodeEditor("RISC_V_top.v", 131, 376); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 131, 376); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 163, 328); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 79 MB. Current time: 11/24/22, 7:21:43 PM MSK
+// Elapsed time: 150 seconds
+selectCodeEditor("RISC_V_top.v", 172, 285); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 243, 485); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 120, 537); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 115, 616); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 103, 574); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 265, 456); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 153, 608); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 27 seconds
+selectCodeEditor("RISC_V_top.v", 197, 341); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 2, 260); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 135, 168); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("RISC_V_top.v", 260, 458); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 260, 458); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 261, 451); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 186, 247); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 489 seconds
+selectCodeEditor("RISC_V_top.v", 567, 430); // ch (w, cr)
+// Elapsed time: 45 seconds
+selectCodeEditor("RISC_V_top.v", 103, 400); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 103, 400, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 123, 409); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 123, 409, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "const"); // l (aP, cr)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aH, cr)
+selectCodeEditor("RISC_V_top.v", 781, 121); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 399, 436); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 98 seconds
+selectCodeEditor("RISC_V_top.v", 473, 429); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 46 seconds
+selectCodeEditor("RISC_V_top.v", 267, 374); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 233, 366); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 202, 364); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 49 seconds
+selectCodeEditor("RISC_V_top.v", 142, 410); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 53 seconds
+selectCodeEditor("RISC_V_top.v", 153, 394); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 18 seconds
+selectCodeEditor("RISC_V_top.v", 205, 392); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 153, 406); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 147, 427); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 146, 449); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 540 seconds
+selectCodeEditor("RISC_V_top.v", 349, 404); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// Elapsed time: 159 seconds
+selectCodeEditor("RISC_V_top.v", 564, 149); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 7:51:43 PM MSK
+// Elapsed time: 118 seconds
+selectCodeEditor("RISC_V_top.v", 250, 517); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 77 seconds
+selectCodeEditor("RISC_V_top.v", 351, 344); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 148 seconds
+selectCodeEditor("RISC_V_top.v", 421, 563); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 467, 557); // ch (w, cr)
+// Elapsed time: 78 seconds
+selectCodeEditor("RISC_V_top.v", 374, 542); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 416, 553); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 1070 seconds
+selectCodeEditor("RISC_V_top.v", 200, 566); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 318 seconds
+selectCodeEditor("RISC_V_top.v", 716, 332); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("RISC_V_top.v", 256, 554); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 533, 551); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 179, 579); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 8:21:44 PM MSK
+// Elapsed time: 387 seconds
+selectCodeEditor("RISC_V_top.v", 348, 320); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 172 seconds
+selectCodeEditor("RISC_V_top.v", 424, 533); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 232 seconds
+selectCodeEditor("RISC_V_top.v", 672, 441); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 522, 454); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 388, 588); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 65 seconds
+selectCodeEditor("RISC_V_top.v", 427, 429); // ch (w, cr)
+// Elapsed time: 41 seconds
+selectCodeEditor("RISC_V_top.v", 173, 633); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 74, 217); // ch (w, cr)
+// Elapsed time: 65 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+selectCodeEditor("decoder_riscv.v", 312, 359); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 103 seconds
+selectCodeEditor("RISC_V_top.v", 131, 304); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 131, 304, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 129, 369); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 44 seconds
+selectCodeEditor("RISC_V_top.v", 149, 254); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 205, 343); // ch (w, cr)
+// Elapsed time: 21 seconds
+selectCodeEditor("RISC_V_top.v", 361, 383); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 137, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 137, 347, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 89, 405); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 259, 415); // ch (w, cr)
+// Elapsed time: 20 seconds
+selectCodeEditor("RISC_V_top.v", 198, 390); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 198, 390, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 329, 417); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 182 seconds
+selectCodeEditor("RISC_V_top.v", 157, 388); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 157, 388, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 391, 455); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 194, 496); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 276, 493); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 54 seconds
+selectCodeEditor("RISC_V_top.v", 164, 436); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 164, 436, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 310, 488); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 75 seconds
+selectCodeEditor("RISC_V_top.v", 410, 453); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 277, 390); // ch (w, cr)
+// Elapsed time: 24 seconds
+selectCodeEditor("RISC_V_top.v", 163, 400); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 163, 400, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 175, 526); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("RISC_V_top.v", 175, 467); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 175, 467, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 272, 537); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("RISC_V_top.v", 124, 515); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 124, 515, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 361, 543); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("RISC_V_top.v", 82, 389); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("RISC_V_top.v", 442, 487); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 506, 536); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("RISC_V_top.v", 603, 495); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 8:51:44 PM MSK
+// Elapsed time: 258 seconds
+selectCodeEditor("RISC_V_top.v", 285, 285); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 285, 285); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 303, 114); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 214, 324); // ch (w, cr)
+// Elapsed time: 34 seconds
+selectCodeEditor("RISC_V_top.v", 209, 573); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 206, 130); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("RISC_V_top.v", 177, 476); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 167, 155); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 222, 107); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 219, 206); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 105, 654); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 189, 206); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 261, 219); // ch (w, cr)
+// Elapsed time: 126 seconds
+selectCodeEditor("RISC_V_top.v", 168, 93); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 168, 93, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 205, 221); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 91 seconds
+selectCodeEditor("RISC_V_top.v", 129, 70); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 50 seconds
+selectCodeEditor("RISC_V_top.v", 158, 569); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  10619399 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/24/22, 11:58:45 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  2403 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/25/22, 12:28:46 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 9:48:33 AM MSK
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 32149460 ms. Increasing delay to 96448380 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  960542 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 10:30:12 AM MSK
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 960838 ms. Increasing delay to 3000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 11:00:13 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 11:30:13 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  2573773 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 12:39:39 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 1:09:40 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 1:39:40 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  404372 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 2:15:47 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 2:45:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 3:15:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 3:45:49 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 4:15:49 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  23903 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  8934418 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 6:48:23 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  10800204 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 10:07:50 PM MSK
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 1339762ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1339762 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1340591 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 10:37:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 11:07:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/25/22, 11:37:52 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 12:07:53 AM MSK
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 792 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 791 ms to process. Increasing delay to 2000 ms.
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 791 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 12:37:53 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  195723 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 1:07:56 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 1:14:28 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  26021907 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 26022147 ms. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 8:28:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 8:58:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 9:28:17 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 9:58:17 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1197589 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 10:28:20 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 10:58:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 11:28:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/26/22, 11:58:21 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 12:28:22 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  36542146 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 10:47:04 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 11:17:04 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 11:47:04 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  2410653 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 12:27:48 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/27/22, 12:57:48 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  43200277 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 1:18:53 AM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  1764 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 10:37:01 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 11:07:02 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 11:37:02 AM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 12:07:03 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 12:37:03 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  4198801 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 1:47:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 2:17:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 2:47:12 PM MSK
+// WARNING: HEventQueue.dispatchEvent() is taking  3329977 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 3330808 ms. Increasing delay to 6000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 3:50:12 PM MSK
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 76 MB. Current time: 11/28/22, 4:20:12 PM MSK
+// Elapsed time: 330247 seconds
+selectCodeEditor("RISC_V_top.v", 577, 431); // ch (w, cr)
+// Elapsed time: 151 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IM.v", 2); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 34, 265); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 232, 251); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("RISC_V_top.v", 33, 285); // ch (w, cr)
+// Elapsed time: 15 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 164, 348); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 377, 422); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 286, 423); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 286, 443); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 283, 459); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 283, 473); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 280, 448); // ch (w, cr)
+// Elapsed time: 15 seconds
+selectCodeEditor("RISC_V_top.v", 309, 439); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 340, 454); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 351, 468); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 213, 433); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("RISC_V_top.v", 279, 304); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 254, 274); // ch (w, cr)
+// Elapsed time: 32 seconds
+selectCodeEditor("RISC_V_top.v", 90, 183); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 4:50:12 PM MSK
+// Elapsed time: 195 seconds
+selectCodeEditor("RISC_V_top.v", 232, 438); // ch (w, cr)
+// Elapsed time: 30 seconds
+selectCodeEditor("RISC_V_top.v", 129, 305); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 129, 305, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 232, 507); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 177, 516); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 177, 516, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 155, 519); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 165, 515); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 168, 514); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 98, 369); // ch (w, cr)
+// Elapsed time: 55 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 517, 322); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RF.v", 3); // i (h, cr)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_tb.v", 0); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("RISC_V_top.v", 227, 498); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 355, 451); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 47, 494); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 263, 156); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 40, 201); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 50 seconds
+selectCodeEditor("RISC_V_top.v", 137, 97); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 27, 92); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("RISC_V_top.v", 181, 261); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 187, 253); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 143, 257); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 143, 257, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 81, 410); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 33, 406); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 428 seconds
+selectCodeEditor("RISC_V_top.v", 186, 621); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 363, 480); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 183, 513); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 27 seconds
+selectCodeEditor("RISC_V_top.v", 146, 202); // ch (w, cr)
+// Elapsed time: 72 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 143, 281); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 143, 280, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 258, 288); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 140, 292); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 225, 282); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 439, 287); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 388, 343); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 188, 229); // ch (w, cr)
+// Elapsed time: 146 seconds
+selectCodeEditor("RISC_V_top.v", 250, 225); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 80, 310); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 179, 324); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 249, 215); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 216, 327); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 290, 322); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 228, 227); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("RISC_V_top.v", 185, 224); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 184, 222, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 144, 242); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 23 seconds
+selectCodeEditor("RISC_V_top.v", 251, 425); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 189, 406); // ch (w, cr)
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectCodeEditor("RISC_V_top.v", 222, 349); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 231, 318); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 228, 309); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("RISC_V_top.v", 146, 304); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 146, 303, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 246, 354); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 26 seconds
+selectCodeEditor("RISC_V_top.v", 86, 305); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("RISC_V_top.v", 342, 336); // ch (w, cr)
+// Elapsed time: 49 seconds
+selectCodeEditor("RISC_V_top.v", 73, 282); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 91 seconds
+selectCodeEditor("RISC_V_top.v", 192, 581); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 294, 357); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 266, 350); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 378, 236); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 239, 269); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 259, 240); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 184, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 198, 246); // ch (w, cr)
+// Elapsed time: 59 seconds
+selectCodeEditor("RISC_V_top.v", 261, 350); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 261, 350, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 487, 343); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 594, 344); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("RISC_V_top.v", 575, 388); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 699, 456); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 604, 554); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 636, 340); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 597, 351); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("RISC_V_top.v", 34, 365); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 488, 348); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("RISC_V_top.v", 567, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 567, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 554, 351); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 553, 351, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 773, 350); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 62 seconds
+selectCodeEditor("RISC_V_top.v", 215, 342); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1039, 353); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1010, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1087, 365); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1087, 365, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 1110, 370); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1101, 369); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1008, 342); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1011, 298); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 331, 362); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 259, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 239, 328); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 199, 345); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 477, 346); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 487, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 496, 344); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 489, 344); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 505, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 396, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 211, 343); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 203, 349); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 199, 343); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 478, 346); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 485, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 757, 344); // ch (w, cr)
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 5:20:12 PM MSK
+// Elapsed time: 61 seconds
+selectCodeEditor("RISC_V_top.v", 93, 390); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 503, 401); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 558, 208); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 983, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1117, 238); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1090, 207); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 556, 251); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 554, 251, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 293, 240); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 293, 240, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 459, 242); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1107, 245); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 586, 224); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 502, 248); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 582, 248); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 492, 238); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 278, 240); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 278, 240, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 487, 243); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 28 seconds
+selectCodeEditor("RISC_V_top.v", 480, 244); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 790, 234); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 666, 249); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 694, 215); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 722, 286); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 721, 286, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 698, 242); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 17 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 673, 245); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 753, 242); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 930, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 926, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 939, 242); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 946, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 778, 264); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 778, 262, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 790, 262); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 968, 245); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 16 seconds
+selectCodeEditor("RISC_V_top.v", 1115, 215); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1131, 246); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 511, 189); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 278, 237); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 278, 237, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 648, 208); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 130, 247); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 168, 239); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("RISC_V_top.v", 457, 224); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("RISC_V_top.v", 1046, 184); // ch (w, cr)
+// Elapsed time: 37 seconds
+selectCodeEditor("RISC_V_top.v", 973, 186); // ch (w, cr)
+// Elapsed time: 27 seconds
+selectCodeEditor("RISC_V_top.v", 272, 200); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 153, 389); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 116, 391); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 116, 391, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 357, 374); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 231, 393); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 231, 393, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 258, 248); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 258, 246, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 260, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 260, 239, false, false, false, false, true); // ch (w, cr) - Double Click
+// Elapsed time: 44 seconds
+selectCodeEditor("RISC_V_top.v", 476, 346); // ch (w, cr)
+// Elapsed time: 46 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 388, 355); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 493, 350); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 674, 346); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 745, 345); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 688, 349); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 488, 364); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 488, 364, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 710, 344); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 828, 329); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 728, 353); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 795, 323); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 764, 352); // ch (w, cr)
+// Elapsed time: 13 seconds
+selectCodeEditor("RISC_V_top.v", 555, 336); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 555, 336, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 775, 346); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 19 seconds
+selectCodeEditor("RISC_V_top.v", 782, 369); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 780, 369, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 784, 382); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 792, 372); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 987, 349); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 1023, 313); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1063, 349); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 1099, 311); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 1288, 257); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1119, 397); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("RISC_V_top.v", 250, 304); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 92, 435); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 191, 426); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 235, 451); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 196, 471); // ch (w, cr)
+// Elapsed time: 29 seconds
+selectCodeEditor("RISC_V_top.v", 109, 467); // ch (w, cr)
+// Elapsed time: 341 seconds
+selectCodeEditor("RISC_V_top.v", 167, 469); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 187, 437); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 187, 437, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 174, 453); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 174, 453, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 176, 452); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 176, 452, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 124, 475); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 201, 349); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 387, 483); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 322, 469); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 191, 429); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 191, 429, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 205, 472); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 93, 428); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 308, 473); // ch (w, cr)
+// Elapsed time: 49 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 25 seconds
+selectCodeEditor("RISC_V_top.v", 118, 53); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 118, 53, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 701, 364); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 247, 367); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 247, 367, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 785, 369); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 53 seconds
+selectCodeEditor("RISC_V_top.v", 935, 286); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 935, 329); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 940, 367); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1022, 324); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 961, 305); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1066, 368); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 13 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 39 seconds
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 44 seconds
+selectCodeEditor("RISC_V_top.v", 1360, 441); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 255, 328); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 256, 347); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("RISC_V_top.v", 392, 305); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 400, 301); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 5:50:13 PM MSK
+// Elapsed time: 927 seconds
+selectCodeEditor("RISC_V_top.v", 1035, 369); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("RISC_V_top.v", 1009, 340); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 486 seconds
+selectCodeEditor("RISC_V_top.v", 990, 378); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 991, 372); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1098, 369); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1028, 371, false, false, false, true, false); // ch (w, cr) - Popup Trigger
+selectCodeEditor("RISC_V_top.v", 992, 361); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 991, 368); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1101, 370); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 1096, 371); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("RISC_V_top.v", 917, 332); // ch (w, cr)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1049230 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 6:29:47 PM MSK
+// Elapsed time: 1645 seconds
+selectCodeEditor("RISC_V_top.v", 142, 450); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 210, 399); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 236, 395); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 163, 406); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 410, 297); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 163, 383); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 49 seconds
+selectCodeEditor("RISC_V_top.v", 176, 281); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 17 seconds
+selectCodeEditor("RISC_V_top.v", 177, 348); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 132, 379); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 212, 488); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 217, 433); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 176, 345); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 10 seconds
+selectCodeEditor("RISC_V_top.v", 128, 176); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 291, 243); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 226, 335); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 131, 167); // ch (w, cr)
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 184, 534); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 56, 454); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 214, 141); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 165, 65); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 184, 469); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 115, 580); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 95, 551); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 130, 501); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 195 seconds
+selectCodeEditor("RISC_V_top.v", 132, 387); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 114, 406); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 128, 388); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 41, 322); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 35, 326); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 114, 355); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 104, 360); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 14 seconds
+selectCodeEditor("RISC_V_top.v", 243, 370); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 136, 444); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 198, 474); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 33, 102); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 153, 168); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 135, 157); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 35, 175); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 34, 300); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 188, 604); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 265, 480); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "decoder_riscv.v", 5); // i (h, cr)
+selectCodeEditor("decoder_riscv.v", 284, 473); // ch (w, cr)
+typeControlKey((HResource) null, "decoder_riscv.v", 'c'); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 372, 331); // ch (w, cr)
+selectCodeEditor("decoder_riscv.v", 372, 331); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "data_mem.v", 6); // i (h, cr)
+selectCodeEditor("data_mem.v", 343, 83); // ch (w, cr)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "RISC_V_top.v", 1); // i (h, cr)
+selectCodeEditor("RISC_V_top.v", 300, 495); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 66, 269); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 35, 246); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 269, 235); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 41 seconds
+selectCodeEditor("RISC_V_top.v", 46, 266); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 62, 283); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 61, 283, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 67, 314); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 61, 326); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 59, 348); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 63, 372); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 65, 399); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 59, 389); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 60, 427); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 60, 455); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 66, 480); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 69, 304); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 11 seconds
+selectCodeEditor("RISC_V_top.v", 104, 265); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 243, 321); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 205, 306); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 266, 471); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 128, 156); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+// Elapsed time: 22 seconds
+selectCodeEditor("RISC_V_top.v", 124, 120); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 49, 116); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 183, 143); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 204, 163); // ch (w, cr)
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 123, 266); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 97, 260); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 263, 345); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 126, 284); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 99, 284); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 96, 366); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 292, 377); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 80, 390); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 81, 414); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 81, 428); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 80, 450); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 83, 471); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 77, 496); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 81, 520); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 83, 540); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 81, 557); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 77, 575); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 190, 306); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 185, 304); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("RISC_V_top.v", 377, 385); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 367, 415); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 111 seconds
+selectCodeEditor("RISC_V_top.v", 291, 343); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 524, 312); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 429, 320); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 56 seconds
+selectCodeEditor("RISC_V_top.v", 167, 116); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 186, 149); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 171, 118); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 138, 184); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 119, 143); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 148, 287); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 37, 270); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 235, 280); // ch (w, cr)
+// Elapsed time: 124 seconds
+selectCodeEditor("RISC_V_top.v", 28, 198); // ch (w, cr)
+typeControlKey(null, null, 'z');
+selectCodeEditor("RISC_V_top.v", 326, 241); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 285, 241); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 87, 407); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 19 seconds
+selectCodeEditor("RISC_V_top.v", 182, 598); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 182, 598, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 263, 410); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 110, 334); // ch (w, cr)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectCodeEditor("RISC_V_top.v", 227, 597); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 214, 602); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 240, 570); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("RISC_V_top.v", 207, 446); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 178, 410); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 216, 350); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 312, 281); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 234, 267); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 198, 250); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 178, 398); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 232, 340); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 174, 411); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 224, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 313, 279); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 252, 272); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 206, 255); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 218, 257); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 221, 256, false, false, false, false, true); // ch (w, cr) - Double Click
+selectCodeEditor("RISC_V_top.v", 219, 248); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 210, 347); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 228, 482); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 234, 491); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 207, 474); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 199, 455); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 257, 491); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 213, 478); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 208, 455); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 249, 499); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 197, 470); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 210, 451); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 227, 488); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 218, 474); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 211, 454); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 217, 472); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 228, 490); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 208, 470); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 211, 451); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 233, 501); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 211, 478); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 214, 460); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 227, 480); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 236, 493); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 209, 472); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 216, 457); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 218, 472); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 227, 492); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 212, 471); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 220, 457); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 215, 471); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 230, 496); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 219, 478); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 216, 461); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 247, 500); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 205, 521); // ch (w, cr)
+// Elapsed time: 26 seconds
+selectCodeEditor("RISC_V_top.v", 196, 493); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 196, 493, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 135, 512); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 167, 454); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 167, 454, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 230, 514); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// Elapsed time: 12 seconds
+selectCodeEditor("RISC_V_top.v", 170, 476); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 170, 476, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 334, 508); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 191, 260); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 191, 260, false, false, false, false, true); // ch (w, cr) - Double Click
+typeControlKey((HResource) null, "RISC_V_top.v", 'c'); // ch (w, cr)
+selectCodeEditor("RISC_V_top.v", 429, 504); // ch (w, cr)
+typeControlKey((HResource) null, "RISC_V_top.v", 'v'); // ch (w, cr)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 459 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "data_mem.v", 6); // i (h, cr)
+selectCodeEditor("data_mem.v", 146, 42); // ch (w, cr)
+selectCodeEditor("data_mem.v", 145, 27); // ch (w, cr)
+// Elapsed time: 39 seconds
+typeControlKey(null, null, 'z');
+// HMemoryUtils.trashcanNow. Engine heap size: 758 MB. GUI used memory: 77 MB. Current time: 11/28/22, 6:59:47 PM MSK

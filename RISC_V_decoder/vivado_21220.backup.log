@@ -1,0 +1,425 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Nov 22 14:52:25 2022
+# Process ID: 21220
+# Current directory: C:/Vivado_project/RISC_V_decoder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16032 C:\Vivado_project\RISC_V_decoder\RISC_V_decoder.xpr
+# Log file: C:/Vivado_project/RISC_V_decoder/vivado.log
+# Journal file: C:/Vivado_project/RISC_V_decoder\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+open_project: Time (s): cpu = 00:00:34 ; elapsed = 00:00:14 . Memory (MB): peak = 664.574 ; gain = 50.066
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Vivado_project\RISC_V_decoder\RISC_V_decoder.srcs\sim_1\new\tb_decoder_riscv_obf.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Vivado_project\RISC_V_decoder\RISC_V_decoder.srcs\sources_1\new\decoder_riscv.v:]
+ERROR: [Common 17-180] Spawn failed: No error
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+WARNING: [VRFC 10-3507] macro 'ALU_ADD' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:8]
+WARNING: [VRFC 10-3507] macro 'LOAD_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:33]
+WARNING: [VRFC 10-3507] macro 'MISC_MEM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:34]
+WARNING: [VRFC 10-3507] macro 'OP_IMM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:35]
+WARNING: [VRFC 10-3507] macro 'AUIPC_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:36]
+WARNING: [VRFC 10-3507] macro 'STORE_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:37]
+WARNING: [VRFC 10-3507] macro 'OP_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:38]
+WARNING: [VRFC 10-3507] macro 'LUI_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:39]
+WARNING: [VRFC 10-3507] macro 'BRANCH_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:40]
+WARNING: [VRFC 10-3507] macro 'JALR_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:41]
+WARNING: [VRFC 10-3507] macro 'JAL_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:42]
+WARNING: [VRFC 10-3507] macro 'SYSTEM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:43]
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xelab -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" Line 76. Module decoder_riscv doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.tb_decoder_riscv_obf
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_decoder_riscv_obf_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_decoder_riscv_obf_behav -key {Behavioral:sim_1:Functional:tb_decoder_riscv_obf} -tclbatch {tb_decoder_riscv_obf.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_decoder_riscv_obf.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+xsim: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 750.551 ; gain = 1.301
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_decoder_riscv_obf_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:14 . Memory (MB): peak = 750.551 ; gain = 13.336
+run 10 us
+Output 'ex_op_b_sel_o' is incorrect, instruction: a4ab396f, time: 10801.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 2c08ee6f, time: 10805.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: bfea636f, time: 10809.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: db1dfdef, time: 10813.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 299ea46f, time: 10817.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: aba10b6f, time: 10821.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 7aadc4ef, time: 10825.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 785086ef, time: 10829.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 1663e66f, time: 10833.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 5d925cef, time: 10837.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: ce62e5ef, time: 10841.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 30ae966f, time: 10845.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: c410b7ef, time: 10849.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b677016f, time: 10853.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 238d9a6f, time: 10857.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8583416f, time: 10861.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b41ca96f, time: 10865.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 5fd02aef, time: 10869.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 9a17956f, time: 10873.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: affe4d6f, time: 10877.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 065cd06f, time: 10881.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b5f9f76f, time: 10885.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: ef438def, time: 10889.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: cf2d6def, time: 10893.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 4f072aef, time: 10897.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 2631346f, time: 10901.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: c3b923ef, time: 10905.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: f5fdc5ef, time: 10909.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: ccb273ef, time: 10913.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6c96beef, time: 10917.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 417f06ef, time: 10921.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 193eda6f, time: 10925.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: fe53c5ef, time: 10929.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b226056f, time: 10933.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 21fab46f, time: 10937.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: dd9dbfef, time: 10941.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 9941436f, time: 10945.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8abfe16f, time: 10949.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 13f0d26f, time: 10953.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 45a72eef, time: 10957.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: df31a5ef, time: 10961.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: d31ec5ef, time: 10965.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8187f36f, time: 10969.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 3fcbce6f, time: 10973.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 543a6cef, time: 10977.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6ee302ef, time: 10981.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b646536f, time: 10985.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 1458dc6f, time: 10989.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: d4d00bef, time: 10993.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e68a93ef, time: 10997.00 ns
+run 10 us
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6512d8ef, time: 11001.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b37a016f, time: 11005.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 0bcc4c6f, time: 11009.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e573b7ef, time: 11013.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8e325f6f, time: 11017.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e340fdef, time: 11021.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 4861caef, time: 11025.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 97da516f, time: 11029.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: c54b21ef, time: 11033.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 4d977aef, time: 11037.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b4273d6f, time: 11041.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e8dec5ef, time: 11045.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: d763c9ef, time: 11049.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6e4f26ef, time: 11053.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e914efef, time: 11057.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: a07ddd6f, time: 11061.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: d0e171ef, time: 11065.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6115f6ef, time: 11069.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e77c9def, time: 11073.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6194d8ef, time: 11077.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 638aa4ef, time: 11081.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8f76236f, time: 11085.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 6c179cef, time: 11089.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 87e3c16f, time: 11093.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: ac852b6f, time: 11097.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 3ee1446f, time: 11101.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: a5fbfd6f, time: 11105.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: e606a5ef, time: 11109.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 5a572cef, time: 11113.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: fea5a5ef, time: 11117.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 4c9d10ef, time: 11121.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 637d4aef, time: 11125.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 32e6f46f, time: 11129.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: f5eeabef, time: 11133.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 15d3806f, time: 11137.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 7aa47eef, time: 11141.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: f97965ef, time: 11145.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 11cbea6f, time: 11149.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 8bd3e16f, time: 11153.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 96ba196f, time: 11157.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b4b5eb6f, time: 11161.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 1329466f, time: 11165.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 433470ef, time: 11169.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 51dd56ef, time: 11173.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 54a06aef, time: 11177.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 7cd840ef, time: 11181.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 70ec64ef, time: 11185.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 930b176f, time: 11189.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b8a18d6f, time: 11193.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: 618544ef, time: 11197.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: b7c7de6f, time: 12649.00 ns
+Output 'ex_op_b_sel_o' is incorrect, instruction: f78476ef, time: 12773.00 ns
+FAIL!
+There are errors in the design, number of errors:         102
+$finish called at time : 12800 ns : File "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 310
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+WARNING: [VRFC 10-3507] macro 'ALU_ADD' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:8]
+WARNING: [VRFC 10-3507] macro 'LOAD_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:33]
+WARNING: [VRFC 10-3507] macro 'MISC_MEM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:34]
+WARNING: [VRFC 10-3507] macro 'OP_IMM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:35]
+WARNING: [VRFC 10-3507] macro 'AUIPC_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:36]
+WARNING: [VRFC 10-3507] macro 'STORE_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:37]
+WARNING: [VRFC 10-3507] macro 'OP_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:38]
+WARNING: [VRFC 10-3507] macro 'LUI_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:39]
+WARNING: [VRFC 10-3507] macro 'BRANCH_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:40]
+WARNING: [VRFC 10-3507] macro 'JALR_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:41]
+WARNING: [VRFC 10-3507] macro 'JAL_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:42]
+WARNING: [VRFC 10-3507] macro 'SYSTEM_OPCODE' redefined [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:43]
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xelab -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" Line 76. Module decoder_riscv doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.tb_decoder_riscv_obf
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_decoder_riscv_obf_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+relaunch_xsim_kernel: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 879.785 ; gain = 0.000
+relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 879.785 ; gain = 0.000
+run 10 us
+run 10 us
+SUCCESS!
+$finish called at time : 12800 ns : File "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 310
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xelab -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" Line 76. Module decoder_riscv doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.tb_decoder_riscv_obf
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_decoder_riscv_obf_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_decoder_riscv_obf_behav -key {Behavioral:sim_1:Functional:tb_decoder_riscv_obf} -tclbatch {tb_decoder_riscv_obf.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_decoder_riscv_obf.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_decoder_riscv_obf_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 886.441 ; gain = 0.000
+update_compile_order -fileset sources_1
+run 10 us
+run 10 us
+SUCCESS!
+$finish called at time : 12800 ns : File "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 310
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file './defines_riscv.v' [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:69]
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+ERROR: [VRFC 10-2865] module 'tb_decoder_riscv_obf' ignored due to previous errors [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:72]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+ERROR: [VRFC 10-3195] cannot open include file './defines_riscv.v' [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:69]
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+ERROR: [VRFC 10-2865] module 'tb_decoder_riscv_obf' ignored due to previous errors [C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v:72]
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_decoder_riscv_obf' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj tb_decoder_riscv_obf_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module decoder_riscv
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_decoder_riscv_obf
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+"xelab -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto d28893bec00c4e9d8744390b3bd9e255 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_decoder_riscv_obf_behav xil_defaultlib.tb_decoder_riscv_obf xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sources_1/new/decoder_riscv.v" Line 76. Module decoder_riscv doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.decoder_riscv
+Compiling module xil_defaultlib.tb_decoder_riscv_obf
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_decoder_riscv_obf_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_decoder_riscv_obf_behav -key {Behavioral:sim_1:Functional:tb_decoder_riscv_obf} -tclbatch {tb_decoder_riscv_obf.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source tb_decoder_riscv_obf.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_decoder_riscv_obf_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 886.441 ; gain = 0.000
+run 10 us
+run 10 us
+SUCCESS!
+$finish called at time : 12800 ns : File "C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.srcs/sim_1/new/tb_decoder_riscv_obf.v" Line 310
+close_sim
+ERROR: [Vivado 12-106] *** Exception: java.lang.Exception: java.lang.StackOverflowError (See C:/Vivado_project/RISC_V_decoder/vivado_pid21220.debug)
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2077.164 ; gain = 0.000
