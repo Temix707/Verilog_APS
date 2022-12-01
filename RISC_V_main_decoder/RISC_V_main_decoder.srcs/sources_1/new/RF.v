@@ -15,8 +15,13 @@ module RF
     initial $readmemb("rf.txt", ram_rf);
     
     // Читает
-    assign RD1_rf = ram_rf[A1_rf];          // ~ 3 = ram_rf[1]
-    assign RD2_rf = ram_rf[A2_rf];
+        
+   // assign RD1_rf = ram_rf[A1_rf];          // ~ 3 = ram_rf[1]
+    //assign RD2_rf = ram_rf[A2_rf];
+    
+    assign RD1_rf = 32'd7;
+    assign RD2_rf = 32'd5;
+    
     
     // Записывает
     always @ (posedge clk) begin

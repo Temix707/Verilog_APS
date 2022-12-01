@@ -6,13 +6,10 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_main_decod
 INFO: [VRFC 10-311] analyzing module RF
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RISC_V_top
-INFO: [VRFC 10-2458] undeclared symbol mux2x1_const_J_B, assumed default net type wire [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:79]
-INFO: [VRFC 10-2458] undeclared symbol mux2x1_WD3, assumed default net type wire [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:153]
-INFO: [VRFC 10-2458] undeclared symbol fetched_instr, assumed default net type wire [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/RISC_V_top.v:164]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/data_mem.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module data_mem
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v" into library xil_defaultlib
-WARNING: [VRFC 10-3507] macro 'ALU_AND' redefined [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:12]
+WARNING: [VRFC 10-3507] macro 'ALU_AND' redefined [C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sources_1/new/decoder_riscv.v:14]
 INFO: [VRFC 10-311] analyzing module decoder_riscv
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Vivado_project/RISC_V_main_decoder/RISC_V_main_decoder.srcs/sim_1/new/RISC_V_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RISC_V_tb

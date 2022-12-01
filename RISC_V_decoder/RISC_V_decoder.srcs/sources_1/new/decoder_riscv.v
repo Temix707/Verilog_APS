@@ -151,23 +151,23 @@ module decoder_riscv (
                     ex_op_b_sel_o = `OP_B_IMM_I;
                     wb_src_sel_o = 1'b0;
                     case(funct3)
-                        3'h0: alu_op_o = `ALU_ADD;
-                        3'h4: alu_op_o = `ALU_XOR;
-                        3'h6: alu_op_o = `ALU_OR;
-                        3'h7: alu_op_o = `ALU_AND;
-                        3'h1:
-                            if(funct7 == 7'h0)
+                        3'd0: alu_op_o = `ALU_ADD;
+                        3'd4: alu_op_o = `ALU_XOR;
+                        3'd6: alu_op_o = `ALU_OR;
+                        3'd7: alu_op_o = `ALU_AND;
+                        3'd1:
+                            if(funct7 == 7'd0)
                                 alu_op_o = `ALU_SLL;
                             else
                                 illegal_instr_o = 1'b1;
-                        3'h5:
+                        3'd5:
                             case(funct7)
-                                7'h00: alu_op_o = `ALU_SRL;
-                                7'h20: alu_op_o = `ALU_SRA;
+                                7'd00: alu_op_o = `ALU_SRL;
+                                7'd20: alu_op_o = `ALU_SRA;
                                 default: illegal_instr_o = 1'b1;
                             endcase
-                        3'h2: alu_op_o = `ALU_SLTS;
-                        3'h3: alu_op_o = `ALU_SLTU;
+                        3'd2: alu_op_o = `ALU_SLTS;
+                        3'd3: alu_op_o = `ALU_SLTU;
                         default: illegal_instr_o = 1'b1;
                     endcase
                 end
@@ -183,11 +183,11 @@ module decoder_riscv (
                     ex_op_b_sel_o = `OP_B_IMM_I; //3'h1
                     alu_op_o = `ALU_ADD;
                     case(funct3)
-                        3'h0: mem_size_o = `LDST_B;
-                        3'h1: mem_size_o = `LDST_H;
-                        3'h2: mem_size_o = `LDST_W;
-                        3'h4: mem_size_o = `LDST_BU;
-                        3'h5: mem_size_o = `LDST_HU;
+                        3'd0: mem_size_o = `LDST_B;
+                        3'd1: mem_size_o = `LDST_H;
+                        3'd2: mem_size_o = `LDST_W;
+                        3'd4: mem_size_o = `LDST_BU;
+                        3'd5: mem_size_o = `LDST_HU;
                         default: illegal_instr_o = 1'b1;
                     endcase
                 end
@@ -201,9 +201,9 @@ module decoder_riscv (
                     ex_op_b_sel_o = `OP_B_IMM_S; //3'h3;
                     alu_op_o = `ALU_ADD;
                     case(funct3)
-                        3'h0: mem_size_o = `LDST_B;
-                        3'h1: mem_size_o = `LDST_H;
-                        3'h2: mem_size_o = `LDST_W;
+                        3'd0: mem_size_o = `LDST_B;
+                        3'd1: mem_size_o = `LDST_H;
+                        3'd2: mem_size_o = `LDST_W;
                         default: illegal_instr_o = 1'b1;
                     endcase
                 end
@@ -211,16 +211,16 @@ module decoder_riscv (
                 
                 ///////////////////////////////////////////// Type B (Инструкции условного перехода)
                 `BRANCH_OPCODE: begin   // Увеличить счетчик команд на значение imm, если верен результат сравнения rs1 и rs2
-                    ex_op_a_sel_o = 2'h0;
-                    ex_op_b_sel_o = 3'h0; //3'h3;
+                    ex_op_a_sel_o = 2'd0;
+                    ex_op_b_sel_o = 3'd0; //3'h3;
                     branch_o = 1'b1;
                     case(funct3)
-                        3'h0: alu_op_o = `ALU_EQ;
-                        3'h1: alu_op_o = `ALU_NE;
-                        3'h4: alu_op_o = `ALU_LTS;
-                        3'h5: alu_op_o = `ALU_GES;
-                        3'h6: alu_op_o = `ALU_LTU;
-                        3'h7: alu_op_o = `ALU_GEU;
+                        3'd0: alu_op_o = `ALU_EQ;
+                        3'd1: alu_op_o = `ALU_NE;
+                        3'd4: alu_op_o = `ALU_LTS;
+                        3'd5: alu_op_o = `ALU_GES;
+                        3'd6: alu_op_o = `ALU_LTU;
+                        3'd7: alu_op_o = `ALU_GEU;
                         default: illegal_instr_o = 1'b1;
                     endcase
                 end
@@ -228,8 +228,8 @@ module decoder_riscv (
                 ///////////////////////////////////////////// Type J (Инструкции безусловгого перехода)
                 `JAL_OPCODE:    begin   // Записать в rd следующий адрес счетчика команд, увеличить счетчик команд на значение imm
                     jal_o = 1'b1;
-                    ex_op_a_sel_o = 2'h1;
-                    ex_op_b_sel_o = 3'h4;
+                    ex_op_a_sel_o = 2'd1;
+                    ex_op_b_sel_o = 3'd4;
                     alu_op_o = `ALU_ADD;
                     wb_src_sel_o = 1'b0;
                     gpr_we_a_o = 1'b1;
@@ -237,11 +237,11 @@ module decoder_riscv (
                 
                 ///////////////////////////////////////////// Type I
                 `JALR_OPCODE:   begin   // Записать в rd следующий адрес счетчика команд, в счетчик команд записать rs1
-                    if(funct3 != 3'h0)
+                    if(funct3 != 3'd0)
                         illegal_instr_o = 1'b1;
                         jalr_o = 1'b1;
-                        ex_op_a_sel_o = 2'h1;
-                        ex_op_b_sel_o = 3'h4;
+                        ex_op_a_sel_o = 2'd1;
+                        ex_op_b_sel_o = 3'd4;
                         alu_op_o = `ALU_ADD;
                         gpr_we_a_o = 1'b1;
                 end
@@ -249,8 +249,8 @@ module decoder_riscv (
                 ///////////////////////////////////////////// Type U
                 `LUI_OPCODE:    begin   // Записать в rd значение непосредственного операнда U-типа imm_u
                     wb_src_sel_o = 1'b0;
-                    ex_op_a_sel_o = 2'h2;
-                    ex_op_b_sel_o = 3'h2;
+                    ex_op_a_sel_o = 2'd2;
+                    ex_op_b_sel_o = 3'd2;
                     alu_op_o = `ALU_ADD;
                     gpr_we_a_o = 1'b1;
                 end
@@ -258,8 +258,8 @@ module decoder_riscv (
                 ///////////////////////////////////////////// Type U
                 `AUIPC_OPCODE:  begin   // Записать в rd результат сложения непосредственного операнда U-типа imm_u и счетчика команд
                     wb_src_sel_o = 1'b0;
-                    ex_op_a_sel_o = 2'h1;
-                    ex_op_b_sel_o = 3'h2;
+                    ex_op_a_sel_o = 2'd1;
+                    ex_op_b_sel_o = 3'd2;
                     alu_op_o = `ALU_ADD;
                     gpr_we_a_o = 1'b1;
                 end 

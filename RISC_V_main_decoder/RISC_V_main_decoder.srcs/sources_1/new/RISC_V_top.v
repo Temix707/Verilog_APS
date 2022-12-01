@@ -8,19 +8,20 @@ module RISC_V_top
         output [BIT_D-1:0] OUT
     );
     
-    wire [ADR_8-1:0] adr;
+    wire [31:0] adr;
     wire [BIT_D-1:0] instr;
     
 /////////////////  CODE  /////////////////
     
     /// Decoder ///
+    wire [31:0] fetched_instr;
     
     wire [1:0]  ex_op_a_sel;
     wire [2:0]  ex_op_b_sel;
-    wire        alu_op;
+    wire [4:0]  alu_op;
     wire        mem_req;
     wire        mem_we;
-    wire        mem_size;
+    wire [2:0]  mem_size;
     wire        gpr_we_a;
     wire        wb_src_sel;
     wire        branch;
@@ -28,7 +29,7 @@ module RISC_V_top
     wire        jalr;
     wire        illegal_instr;
     
-    
+    assign fetched_instr [31:0] = instr [31:0];
     
     
     /// SE ///
@@ -65,37 +66,39 @@ module RISC_V_top
     wire br_comp_and;
     wire and_jal_or;
     
-    wire [31:0] mux2x1_immI_B;
+    wire [31:0] mux2x1_const_J_B;
     wire [31:0] mux2x1_4_imm;
     
     wire        EN;
-    reg [31:0] PC = 32'd0;
+    reg [31:0] PC;
+    initial PC = 32'b0;
     
-    assign  EN = 1'd1; 
+    assign  EN = 1'b1; 
     
     assign br_comp_and = branch & comp_flag;
     assign and_jal_or = jal | br_comp_and;
     
-    assign mux2x1_const_J_B = branch ? imm_B : imm_J;
+    assign mux2x1_const_J_B = branch ? imm_B : SE_J;
     assign mux2x1_4_imm = and_jal_or ? mux2x1_const_J_B : 32'd4;
     
     wire [31:0] RD1; 
-    wire mux2x1_instr;       
-    assign  mux2x1_instr = jalr ? (RD1 + imm_I) : mux2x1_4_imm;
+    wire [31:0] mux2x1_instr;
+    wire [31:0] sum;
+    assign sum = PC + mux2x1_4_imm;
+           
+    assign  mux2x1_instr = jalr ? (RD1 + SE_I) : sum;
     assign adr = PC;
     
-    always @(posedge clk or posedge rst) begin
+    always @(posedge clk) begin
         if (rst) begin
             PC <= 32'd0;
-        end 
-        else if (EN) begin
-            PC <= PC + mux2x1_instr;
+        end
+        if (EN) begin
+            PC <= mux2x1_instr;
         end else begin
             PC <= PC;
         end
     end
-    
-    
 
     
     /// RF ///
@@ -114,7 +117,6 @@ module RISC_V_top
     assign A3 = instr[11:7];
     
     
-    assign OUT = RD1; ////////
     
     
     /// MUX 3x1  the first number for alu///
@@ -128,7 +130,7 @@ module RISC_V_top
     
   //wire [2:0] ex_op_b_sel;
     wire [31:0] mux5x1_s;
-    assign mux5x1_s = (ex_op_b_sel == 3'd0) ? RD2 : ((ex_op_b_sel == 3'd1) ? imm_I : ((ex_op_b_sel == 3'd2) ? {instr[31:12], 11'd0} : ((ex_op_b_sel == 32'd3) ? imm_S : ((ex_op_b_sel == 32'd4) ? 32'd4 : 32'd0)))); 
+    assign mux5x1_s = (ex_op_b_sel == 3'd0) ? RD2 : ((ex_op_b_sel == 3'd1) ? SE_I : ((ex_op_b_sel == 3'd2) ? {instr[31:12], 11'd0} : ((ex_op_b_sel == 32'd3) ? SE_S : ((ex_op_b_sel == 32'd4) ? 32'd4 : 32'd0)))); 
     
     
     /// ALU ///
@@ -136,7 +138,7 @@ module RISC_V_top
   //wire comp;
     wire [4:0] ALUOp; 
     wire [31:0]  Result;
-    assign ALUOp = instr[27:23];
+    assign ALUOp = alu_op;
     
     
     /// Data Memory ///
@@ -149,11 +151,12 @@ module RISC_V_top
     /// MUX 2x1///
     
   //wire wb_src_sel;
-    wire [31:0] mux2x1_o;
+    wire [31:0] mux2x1_WD3;
     assign mux2x1_WD3 = wb_src_sel ? RD : Result;
     assign WD3 = mux2x1_WD3;
     
         
+    assign OUT = PC; ////ÄËß ÏÐÎÂÅÐÊÈ////    
     
     
 /////////////////  Connection  /////////////////
@@ -204,7 +207,7 @@ module RISC_V_top
     ALU dut_alu(
         .RD1_alu(RD1),
         .RD2_alu(RD2),
-        .ALUOp_alu(alu_op),
+        .ALUOp_alu(ALUOp),
     
         .Flag(comp_flag),   
         .Result(Result) 
@@ -218,7 +221,7 @@ module RISC_V_top
         .WD_dm(RD2),
         .WE_dm(mem_we),
         .RD_dm(RD),
-        .I_mem_req(mem_req),
+        //.I_mem_req(mem_req),
         //.I_mem_size(mem_size),
         .mem_we(mem_we)
      );
