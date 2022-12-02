@@ -13,3 +13,22 @@ start_gui
 open_project C:/Vivado_project/RISC_V_decoder/RISC_V_decoder.xpr
 update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
+launch_simulation
+source tb_decoder_riscv_obf.tcl
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+relaunch_sim
+run 10 us
+run 10 us
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_simulation
+source tb_decoder_riscv_obf.tcl
+run 10 us
+run 10 us
+close_sim

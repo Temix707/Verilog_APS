@@ -12,7 +12,7 @@ module data_mem(
     
     reg [31:0] MEM [0:255];
     
-    //initial $readmemb("data.txt", MEM);
+    initial $readmemb("data.txt", MEM);
     //assign RD = ((A[31:10] == 22'b0010100000000000000000));  
     
     always @(posedge clk) begin

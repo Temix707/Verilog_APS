@@ -51,8 +51,8 @@ module RISC_V_top
     
     assign SE_I = {{20{imm_I[11]}}, imm_I[11:0]}; 
     assign SE_S = {{20{imm_S[11]}}, imm_S[11:0]}; 
-    assign SE_J = {{11{imm_J[20]}}, imm_J[11:0], 1'b0}; 
-    assign SE_B = {{19{imm_B [11]}}, imm_B[11:0], 1'b0}; 
+    assign SE_J = {{19{imm_J[11]}}, imm_J[11:0], 1'b0}; 
+    assign SE_B = {{19{imm_B[11]}}, imm_B[11:0], 1'b0}; 
 
     
     /// IM and Programm counter///
