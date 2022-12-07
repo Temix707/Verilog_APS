@@ -48,3 +48,8 @@ relaunch_sim
 relaunch_sim
 relaunch_sim
 relaunch_sim
+close_sim
+launch_simulation
+source RISC_V_tb.tcl
+relaunch_sim
+relaunch_sim

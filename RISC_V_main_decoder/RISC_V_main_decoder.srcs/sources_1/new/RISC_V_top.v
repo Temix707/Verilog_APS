@@ -78,7 +78,7 @@ module RISC_V_top
     assign br_comp_and = branch & comp_flag;
     assign and_jal_or = jal | br_comp_and;
     
-    assign mux2x1_const_J_B = branch ? imm_B : SE_J;
+    assign mux2x1_const_J_B = branch ? SE_B : SE_J; //
     assign mux2x1_4_imm = and_jal_or ? mux2x1_const_J_B : 32'd4;
     
     wire [31:0] RD1; 
@@ -124,7 +124,7 @@ module RISC_V_top
   //wire [1:0] ex_op_a_sel;
     wire [31:0] mux3x1_f;
     assign mux3x1_f = (ex_op_a_sel == 2'b00) ? RD1 : ((ex_op_a_sel == 2'b01) ? PC : ((ex_op_a_sel == 2'b11) ? 32'd0 : 32'd0)); 
-                        
+                 
     
     /// MUX 5x1 the second number for alu///
     
@@ -205,8 +205,8 @@ module RISC_V_top
     
     /// ALU ///
     ALU dut_alu(
-        .RD1_alu(RD1),
-        .RD2_alu(RD2),
+        .RD1_alu(mux3x1_f),
+        .RD2_alu(mux5x1_s),
         .ALUOp_alu(ALUOp),
     
         .Flag(comp_flag),   
@@ -220,10 +220,10 @@ module RISC_V_top
         .A_dm(A),
         .WD_dm(RD2),
         .WE_dm(mem_we),
-        .RD_dm(RD),
+        .RD_dm(RD)
         //.I_mem_req(mem_req),
         //.I_mem_size(mem_size),
-        .mem_we(mem_we)
+        //.mem_we_dm(mem_we)
      );
     
     
