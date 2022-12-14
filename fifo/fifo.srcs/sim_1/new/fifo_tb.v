@@ -4,7 +4,7 @@ module fifo_tb#(
     parameter ADR = 4, BIT_D = 8
 )();
 
-    reg                 clk_tb = 1'b0;
+    reg                 clk_tb;
     reg                 rst_tb;
     reg                 RD_tb;
     reg                 WR_tb;    
@@ -35,13 +35,24 @@ module fifo_tb#(
         .rd_empty(rd_empty_tb)
     );
 
+    initial begin
+        clk_tb = 1'b0;
+        rst_tb = 1'b0;
+        RD_tb = 1'b0;
+        WR_tb = 1'b0;    
+        data0_i_tb = 8'd0;
+    end
 
-initial begin
-        
+
+    initial begin
         Write(clk_tb, 1'b1, 8'd7);
-        #40;
+        #40
         Write(clk_tb, 1'b1, 8'd5);
         #40
+        Write(clk_tb, 1'b1, 8'd9);
+        #40
+        Write(clk_tb, 1'b0, 8'd5);
+        WR_tb = 1'b0;
         Read(clk_tb, 1'b1);
         #40
         $stop;
@@ -55,11 +66,11 @@ initial begin
         clk_tb = clk_exp;
         WR_tb = WR_exp;
         data0_i_tb = data0_i_exp;
-        #100;
         
         $display("Out is %b", data0_o_tb);
     end
     endtask
+    
     
     task Read;
         input       clk_exp;

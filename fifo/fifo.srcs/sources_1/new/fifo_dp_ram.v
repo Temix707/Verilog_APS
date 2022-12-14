@@ -31,6 +31,11 @@ module fifo_dp_ram
     assign wr_full = (fifo_cnt == 8);
     assign rd_empty = (fifo_cnt == 0);
 
+    initial begin
+        fifo_cnt = 4'd0;
+        rd_ptr = 3'd0;
+        wr_ptr = 3'd0;
+    end
 
 //Write and Read block//
 
